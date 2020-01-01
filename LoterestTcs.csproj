@@ -58,6 +58,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\TableroJuego.cs" />
+    <Compile Include="Ventanas\Ganaste.xaml.cs">
+      <DependentUpon>Ganaste.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Loteria.xaml.cs">
       <DependentUpon>Loteria.xaml</DependentUpon>
     </Compile>
@@ -90,6 +93,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Ventanas\Ganaste.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Ventanas\Loteria.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
