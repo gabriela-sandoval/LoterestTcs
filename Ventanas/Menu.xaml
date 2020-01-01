@@ -50,7 +50,7 @@
         <Label Content="Selecciona un modo de juego:" HorizontalAlignment="Left" Margin="314,39,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="36" FontWeight="Bold" Foreground="White"/>
         <Label Content="LOTERIA" HorizontalAlignment="Left" Margin="457,127,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="60" FontWeight="Bold" Foreground="White"/>
         <Label Content="AL AZAR" HorizontalAlignment="Left" Margin="812,127,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="60" FontWeight="Bold" Foreground="White"/>
-        <Button x:Name="buttonLoteria" Content="" HorizontalAlignment="Left" Margin="399,210,0,0" VerticalAlignment="Top" Width="290" Height="361" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button x:Name="LoteriaButtonMenu" Content="" HorizontalAlignment="Left" Margin="399,210,0,0" VerticalAlignment="Top" Width="290" Height="361" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="LoteriaButtonMenu_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/LoterestTcs;component/Recursos/cartaLoteria.png" Stretch="Uniform"/>
             </Button.Background>

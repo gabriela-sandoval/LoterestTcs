@@ -117,29 +117,32 @@ namespace LoterestTcs
 
         private void IngresarButtonIniciarSesion_Click(object sender, RoutedEventArgs e)
         {
-            JugadorRegistrado jugadorRegistrado = new JugadorRegistrado();
-            jugadorRegistrado.NombreJugador = NombreTextBoxIniciarSesion.Text.Trim();
-            jugadorRegistrado.ContraseñaJugador = ContaseñaBoxIniciarSesion.Password.Trim();
+            //JugadorRegistrado jugadorRegistrado = new JugadorRegistrado();
+            //jugadorRegistrado.NombreJugador = NombreTextBoxIniciarSesion.Text.Trim();
+            //jugadorRegistrado.ContraseñaJugador = ContaseñaBoxIniciarSesion.Password.Trim();
 
-            if (ValidarDatosInicioSesion(jugadorRegistrado.NombreJugador, jugadorRegistrado.ContraseñaJugador))
-            {
-                try
-                {
-                    string ejecutar = cliente.IniciarSesion(jugadorRegistrado);
-                    string mensaje = ejecutar.ToString();
-                    MessageBox.Show(mensaje, "Inicio de sesión", MessageBoxButton.OK, MessageBoxImage.Information);
-                    //Menu menu = new Menu(jugadorRegistrado.NombreJugador);
-                    //DesplegarVentana(menu);
-                }
-                catch (EndpointNotFoundException)
-                {
-                    MessageBox.Show("Servidor no disponible, intente más tarde", "Servidor no disponible", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Algún campo se encuentra vacío, intente nuevamente", "Campos inválidos", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            //if (ValidarDatosInicioSesion(jugadorRegistrado.NombreJugador, jugadorRegistrado.ContraseñaJugador))
+            //{
+            //    try
+            //    {
+            //        string ejecutar = cliente.IniciarSesion(jugadorRegistrado);
+            //        string mensaje = ejecutar.ToString();
+            //        MessageBox.Show(mensaje, "Inicio de sesión", MessageBoxButton.OK, MessageBoxImage.Information);
+            //        //Menu menu = new Menu(jugadorRegistrado.NombreJugador);
+            //        //DesplegarVentana(menu);
+            //    }
+            //    catch (EndpointNotFoundException)
+            //    {
+            //        MessageBox.Show("Servidor no disponible, intente más tarde", "Servidor no disponible", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Algún campo se encuentra vacío, intente nuevamente", "Campos inválidos", MessageBoxButton.OK, MessageBoxImage.Error);
+            //}
+
+            Menu menu = new Menu(NombreTextBoxIniciarSesion.Text);
+            DesplegarVentana(menu);
         }
 
         private bool ValidarDatosInicioSesion(string nombreJugador, string contraseñaJugador)

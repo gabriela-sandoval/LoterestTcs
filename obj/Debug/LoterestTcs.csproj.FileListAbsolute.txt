@@ -20,3 +20,5 @@ C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Verificac
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\LoterestTcs.csproj.CopyComplete
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Menu.g.cs
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Menu.baml
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Tablero.g.cs
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Tablero.baml

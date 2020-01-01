@@ -15,5 +15,17 @@ namespace LoterestTcs.Ventanas
             NombreJugadorLabel.Content = nombreJugador;
         }
 
+        private void LoteriaButtonMenu_Click(object sender, RoutedEventArgs e)
+        {
+            Tablero tablero = new Tablero(10);
+            DesplegarVentana(tablero);
+
+        }
+
+        private void DesplegarVentana(Window window)
+        {
+            window.Show();
+            this.Close();
+        }
     }
 }
