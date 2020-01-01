@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\App.xaml
-4618994895
+5-1236754423
 
-11-909363073
+121069110061
 16-1563998970
-MainWindow.xaml;Ventanas\Menu.xaml;Ventanas\Tablero.xaml;Ventanas\Verificacion.xaml;
+MainWindow.xaml;Ventanas\Menu.xaml;Ventanas\SalaChat.xaml;Ventanas\Tablero.xaml;Ventanas\Verificacion.xaml;
 
-False
+True
 
