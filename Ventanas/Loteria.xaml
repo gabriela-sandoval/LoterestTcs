@@ -1,0 +1,49 @@
+﻿<Window x:Class="LoterestTcs.Ventanas.Loteria"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoterestTcs.Ventanas"
+        mc:Ignorable="d"
+        Title="Loteria" Height="658" Width="1290">
+    <Window.Background>
+        <ImageBrush ImageSource="/LoterestTcs;component/Recursos/fondoPrincipal.png"/>
+    </Window.Background>
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="100" Margin="1179,502,0,0" VerticalAlignment="Top" Width="100" Source="/LoterestTcs;component/Recursos/logoLoterest.png"/>
+        <Button x:Name="buttonRegresar" Content="" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="70" Height="70" BorderBrush="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.028,0.087" Click="ButtonRegresar_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/LoterestTcs;component/Recursos/regresar.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Image x:Name="CartaImage" HorizontalAlignment="Left" Height="263" Margin="150,91,0,0" VerticalAlignment="Top" Width="175" Source="../Resources/04 - MOCHILA.png"/>
+        <Button x:Name="buttonLoteria" Content="" HorizontalAlignment="Left" Margin="970,223,0,0" VerticalAlignment="Top" Width="258" Height="125" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ButtonLoteria_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/LoterestTcs;component/Recursos/botonLoteria.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Carta saliente:" HorizontalAlignment="Left" Margin="171,45,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="24"/>
+        <Label Content="Puntaje:" HorizontalAlignment="Left" Margin="970,149,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="48" RenderTransformOrigin="6.062,-8.32"/>
+        <Label Content="Tiempo:" HorizontalAlignment="Left" Margin="64,427,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="48" RenderTransformOrigin="6.062,-8.32"/>
+        <Label x:Name="TiempoLabel" Content="0" HorizontalAlignment="Left" Margin="274,427,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="48" RenderTransformOrigin="6.062,-8.32"/>
+        <Image x:Name="TableroImage" HorizontalAlignment="Left" Height="529" Margin="455,53,0,0" VerticalAlignment="Top" Width="377" Source="/LoterestTcs;component/Recursos/tableroVacio.png"/>
+        <Image x:Name="ImageCarta1_1" HorizontalAlignment="Left" Height="117" Margin="471,68,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta1_1_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta1_2" HorizontalAlignment="Left" Height="117" Margin="561,68,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta1_2_MouseLeftButtonDown"/>
+        <Image x:Name="imageCarta1_3" HorizontalAlignment="Left" Height="117" Margin="649,68,0,0" VerticalAlignment="Top" Width="79"/>
+        <Image x:Name="ImageCarta1_4" HorizontalAlignment="Left" Height="117" Margin="738,68,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta1_4_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta2_1" HorizontalAlignment="Left" Height="117" Margin="471,196,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta2_1_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta2_2" HorizontalAlignment="Left" Height="117" Margin="561,196,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta2_2_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta1_3" HorizontalAlignment="Left" Height="117" Margin="649,68,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta1_3_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta2_4" HorizontalAlignment="Left" Height="117" Margin="738,196,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta2_4_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta2_3" HorizontalAlignment="Left" Height="117" Margin="649,196,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta2_3_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta3_1" HorizontalAlignment="Left" Height="117" Margin="472,323,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta3_1_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta3_2" HorizontalAlignment="Left" Height="117" Margin="562,323,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta3_2_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta3_4" HorizontalAlignment="Left" Height="117" Margin="739,323,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta3_4_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta3_3" HorizontalAlignment="Left" Height="117" Margin="650,323,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta3_3_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta4_1" HorizontalAlignment="Left" Height="117" Margin="471,450,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta4_1_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta4_2" HorizontalAlignment="Left" Height="117" Margin="561,450,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta4_2_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta4_4" HorizontalAlignment="Left" Height="117" Margin="738,450,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta4_4_MouseLeftButtonDown"/>
+        <Image x:Name="ImageCarta4_3" HorizontalAlignment="Left" Height="117" Margin="649,450,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta4_3_MouseLeftButtonDown"/>
+
+    </Grid>
+</Window>
