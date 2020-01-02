@@ -23,5 +23,15 @@ namespace LoterestTcs.Ventanas
         {
             InitializeComponent();
         }
+
+        private void ButtonEnviar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void JugarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

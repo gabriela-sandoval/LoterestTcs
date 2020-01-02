@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MessageService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IUserManager_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AccesoBaseDeDatos" />
+      <xsd:import schemaLocation="http://localhost:8081/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MessageService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserManager_CrearCuentaJugador_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearCuentaJugador" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_IniciarSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesion" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_CambiarDatosJugador_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarDatosJugador" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_PuntajeMaximo_InputMessage">
+    <wsdl:part name="parameters" element="tns:PuntajeMaximo" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_EnviarMensajeChat_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarMensajeChat" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_SolicitarPuntaje_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarPuntaje" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_CerrarSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CerrarSesion" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_FinalizarJuego_InputMessage">
+    <wsdl:part name="parameters" element="tns:FinalizarJuego" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_EnviarInvitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarInvitacion" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_ConfirmarInvitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarInvitacion" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_Respuesta_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:Respuesta" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_DevuelveCuenta_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:DevuelveCuenta" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_MensajeChat_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:MensajeChat" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_MostrarPuntajes_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:MostrarPuntajes" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_RecibirConfirmacion_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RecibirConfirmacion" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_RecibirInvitacion_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:RecibirInvitacion" />
+  </wsdl:message>
+  <wsdl:message name="IUserManager_FinPartida_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:FinPartida" />
+  </wsdl:message>
+  <wsdl:portType name="IUserManager">
+    <wsdl:operation name="CrearCuentaJugador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/CrearCuentaJugador" message="tns:IUserManager_CrearCuentaJugador_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IniciarSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/IniciarSesion" message="tns:IUserManager_IniciarSesion_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarDatosJugador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/CambiarDatosJugador" message="tns:IUserManager_CambiarDatosJugador_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PuntajeMaximo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/PuntajeMaximo" message="tns:IUserManager_PuntajeMaximo_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMensajeChat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/EnviarMensajeChat" message="tns:IUserManager_EnviarMensajeChat_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarPuntaje">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/SolicitarPuntaje" message="tns:IUserManager_SolicitarPuntaje_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CerrarSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/CerrarSesion" message="tns:IUserManager_CerrarSesion_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FinalizarJuego">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/FinalizarJuego" message="tns:IUserManager_FinalizarJuego_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarInvitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/EnviarInvitacion" message="tns:IUserManager_EnviarInvitacion_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarInvitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserManager/ConfirmarInvitacion" message="tns:IUserManager_ConfirmarInvitacion_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Respuesta">
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/Respuesta" message="tns:IUserManager_Respuesta_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveCuenta">
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/DevuelveCuenta" message="tns:IUserManager_DevuelveCuenta_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MensajeChat">
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/MensajeChat" message="tns:IUserManager_MensajeChat_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarPuntajes">
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/MostrarPuntajes" message="tns:IUserManager_MostrarPuntajes_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibirConfirmacion">
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/RecibirConfirmacion" message="tns:IUserManager_RecibirConfirmacion_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecibirInvitacion">
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/RecibirInvitacion" message="tns:IUserManager_RecibirInvitacion_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FinPartida">
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserManager/FinPartida" message="tns:IUserManager_FinPartida_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IUserManager" type="tns:IUserManager">
+    <wsp:PolicyReference URI="#NetTcpBinding_IUserManager_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="CrearCuentaJugador">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/CrearCuentaJugador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="IniciarSesion">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/IniciarSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarDatosJugador">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/CambiarDatosJugador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="PuntajeMaximo">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/PuntajeMaximo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMensajeChat">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/EnviarMensajeChat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarPuntaje">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/SolicitarPuntaje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="CerrarSesion">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/CerrarSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="FinalizarJuego">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/FinalizarJuego" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarInvitacion">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/EnviarInvitacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarInvitacion">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/ConfirmarInvitacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Respuesta">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/Respuesta" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DevuelveCuenta">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/DevuelveCuenta" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MensajeChat">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/MensajeChat" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarPuntajes">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/MostrarPuntajes" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibirConfirmacion">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/RecibirConfirmacion" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecibirInvitacion">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/RecibirInvitacion" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinPartida">
+      <soap12:operation soapAction="http://tempuri.org/IUserManager/FinPartida" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MessageService">
+    <wsdl:port name="NetTcpBinding_IUserManager" binding="tns:NetTcpBinding_IUserManager">
+      <soap12:address location="net.tcp://localhost:8091/MessageService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8091/MessageService</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>DESKTOP-SJ3KI9G\USER8</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

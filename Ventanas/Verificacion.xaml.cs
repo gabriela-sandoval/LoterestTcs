@@ -1,23 +1,24 @@
-﻿using LoterestTcs.ServiceReference;
-using System.Windows;
-using LoterestTcs;
+﻿using System.Windows;
 using System.ServiceModel;
+using LoterestTcs.ServiceReferenceLoterest;
+using LoterestTcs.Model;
+using System;
 
 namespace LoterestTcs.Ventanas
 {
     /// <summary>
     /// Lógica de interacción para Verificacion.xaml
     /// </summary>
-    public partial class Verificacion : Window
+    public partial class Verificacion : Window, IUserManagerCallback
     {
-        ServiceReference.Service1Client cliente = new ServiceReference.Service1Client();
         private string codigoVerificacion;
-        private Jugador nuevoJugador;
-        public Verificacion(string codigoGenerado, Jugador jugador)
+        private Usuario usuarioCreado;
+
+        public Verificacion(string codigoGenerado, Usuario usuario)
         {
             InitializeComponent();
             codigoVerificacion = codigoGenerado;
-            nuevoJugador = jugador;
+            usuarioCreado = usuario;
         }
 
         private void VerificarButton_Click(object sender, RoutedEventArgs e)
@@ -26,20 +27,9 @@ namespace LoterestTcs.Ventanas
 
             if (ValidarCodigoIngresado(codigoIngresado))
             {
-                if (string.Equals(codigoIngresado, codigoVerificacion))
+                if (String.Equals(codigoIngresado, codigoVerificacion))
                 {
-                    try
-                    {
-                        string ejecutar = cliente.Agregar(nuevoJugador);
-                        string mensaje = ejecutar.ToString();
-                        MessageBox.Show(mensaje, "Verificación", MessageBoxButton.OK, MessageBoxImage.Information);
-                        Menu menu = new Menu(nuevoJugador.NombreJugador);
-                        DesplegarVentana(menu);
-                    }
-                    catch (EndpointNotFoundException)
-                    {
-                        MessageBox.Show("Servidor no disponible, intente más tarde", "Servidor no disponible", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
+                    RegistrarJugador();
                 }
                 else
                 {
@@ -89,6 +79,67 @@ namespace LoterestTcs.Ventanas
             this.Close();
         }
 
+        private void RegistrarJugador()
+        {
+            try
+            {
+                InstanceContext instanceContext = new InstanceContext(this);
+                UserManagerClient userManagerClient = new UserManagerClient(instanceContext);
+                Jugador jugador = new Jugador()
+                {
+                    NombreJugador = usuarioCreado.NombreUsuario,
+                    CorreoJugador = usuarioCreado.CorreoUsuario,
+                    ContraseñaJugador = usuarioCreado.ContraseñaUsuario,
+                    PuntajeJugador = 0
+                };
 
+                userManagerClient.CrearCuentaJugador(jugador);
+                userManagerClient.IniciarSesion(usuarioCreado.NombreUsuario, usuarioCreado.ContraseñaUsuario);
+            }
+            catch (EndpointNotFoundException)
+            {
+                MessageBox.Show("Operación inválida", "Crear cuenta");
+            }
+        }
+
+        public void Respuesta(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Crear cuenta", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        public void DevuelveCuenta(Jugador jugador)
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+                Menu ventana = new Menu(jugador);
+                DesplegarVentana(ventana);
+
+            });
+        }
+
+        public void MensajeChat(string mensaje)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void MostrarPuntajes(PuntajeUsuario[] puntajesUsuarios)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RecibirConfirmacion(bool opcion, string nombreUsuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RecibirInvitacion(string nombreUsuario, string mensajeUsuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void FinPartida(string mensaje)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

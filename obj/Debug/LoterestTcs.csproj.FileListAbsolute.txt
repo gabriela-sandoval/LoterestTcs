@@ -22,3 +22,9 @@ C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Menu.g.cs
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Menu.baml
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Tablero.g.cs
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Tablero.baml
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Ganaste.g.cs
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Loteria.g.cs
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\SalaChat.g.cs
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Ganaste.baml
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\Loteria.baml
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\SalaChat.baml

@@ -531,9 +531,9 @@ namespace LoterestTcs.Ventanas
 
         private void RegresarButton_Click(object sender, RoutedEventArgs e)
         {
-            Menu menu = new Menu("Prueba");
-            menu.Show();
-            this.Close();
+            //Menu menu = new Menu("Prueba");
+            //menu.Show();
+            //this.Close();
         }
     }
 }

@@ -60,7 +60,7 @@
         </TextBox>
         <Label x:Name="ContraseñaLabelIniciarSesion" Content="Contraseña:" HorizontalAlignment="Left" Margin="878,18,0,0" VerticalAlignment="Top" 
             Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
-        <PasswordBox x:Name="ContaseñaBoxIniciarSesion" HorizontalAlignment="Left" Margin="878,53,0,0" VerticalAlignment="Top" 
+        <PasswordBox x:Name="ContraseñaBoxIniciarSesion" HorizontalAlignment="Left" Margin="878,53,0,0" VerticalAlignment="Top" 
             Width="250" Height="30" FontFamily="Calibri Light" FontSize="18" FontWeight="Bold" 
             BorderBrush="{x:Null}" SelectionBrush="#FFCCE4E4" Foreground="#FF04547C"
         >

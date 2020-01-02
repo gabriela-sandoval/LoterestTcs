@@ -11,13 +11,13 @@
     </Window.Background>
     <Grid>
         <Image HorizontalAlignment="Left" Height="100" Margin="1179,502,0,0" VerticalAlignment="Top" Width="100" Source="/LoterestTcs;component/Recursos/logoLoterest.png"/>
-        <Button x:Name="buttonRegresar" Content="" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="70" Height="70" BorderBrush="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.028,0.087" Click="ButtonRegresar_Click">
+        <Button x:Name="buttonRegresar" Content="" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="70" Height="70" BorderBrush="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.028,0.087">
             <Button.Background>
                 <ImageBrush ImageSource="/LoterestTcs;component/Recursos/regresar.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Image x:Name="CartaImage" HorizontalAlignment="Left" Height="263" Margin="150,91,0,0" VerticalAlignment="Top" Width="175" Source="../Resources/04 - MOCHILA.png"/>
-        <Button x:Name="buttonLoteria" Content="" HorizontalAlignment="Left" Margin="970,223,0,0" VerticalAlignment="Top" Width="258" Height="125" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="ButtonLoteria_Click">
+        <Image x:Name="CartaImage" HorizontalAlignment="Left" Height="263" Margin="150,91,0,0" VerticalAlignment="Top" Width="175" Source="/LoterestTcs;component/Cartas/04 Laptop.png"/>
+        <Button x:Name="buttonLoteria" Content="" HorizontalAlignment="Left" Margin="970,223,0,0" VerticalAlignment="Top" Width="258" Height="125" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/LoterestTcs;component/Recursos/botonLoteria.png"/>
             </Button.Background>

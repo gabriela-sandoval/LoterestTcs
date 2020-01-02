@@ -2,44 +2,52 @@
 using System.ServiceModel;
 using System.Windows;
 using CorreoDeVerificacion;
-using LoterestTcs.ServiceReference;
 using LoterestTcs.Ventanas;
+using LoterestTcs.ServiceReferenceLoterest;
+using System.Threading.Tasks;
+using LoterestTcs.Model;
 
 namespace LoterestTcs
 {
+    [CallbackBehavior(UseSynchronizationContext = false)]
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, IUserManagerCallback
     {
+        private Jugador jugador;
         public MainWindow()
         {
             InitializeComponent();
         }
-
-        ServiceReference.Service1Client cliente = new ServiceReference.Service1Client();
 
         private void SiguienteButtonCrearCuenta_Click(object sender, RoutedEventArgs e)
         {
             EnvioDeCorreo envioDeCorreo = new EnvioDeCorreo();
             string codigoVerificacion = GenerarCodigoVerificacion().ToString();
 
-            Jugador nuevoJugador = new Jugador();
-            nuevoJugador.NombreJugador = NombreTextBoxCrearCuenta.Text.Trim();
-            nuevoJugador.CorreoJugador = CorreoTextBoxCrearCuenta.Text.Trim();
-            nuevoJugador.ContraseñaJugador = ContraseñaBoxCrearCuenta.Password.Trim();
+            string NombreJugador = NombreTextBoxCrearCuenta.Text.Trim();
+            string CorreoJugador = CorreoTextBoxCrearCuenta.Text.Trim();
+            string ContraseñaJugador = ContraseñaBoxCrearCuenta.Password.Trim();
 
             string repetirContraseña = RepetirContraseñaBoxCrearCuenta.Password.Trim();
 
-            if (Equals(nuevoJugador.ContraseñaJugador, repetirContraseña))
+            if (Equals(ContraseñaJugador, repetirContraseña))
             {
-                if (ValidarDatosIngresadosRegistro(nuevoJugador.NombreJugador, nuevoJugador.CorreoJugador, nuevoJugador.ContraseñaJugador, repetirContraseña))
+                if (ValidarDatosIngresadosRegistro(NombreJugador, CorreoJugador, ContraseñaJugador, repetirContraseña))
                 {
-                    if (ValidarCorreo(nuevoJugador.CorreoJugador))
+                    if (ValidarCorreo(CorreoJugador))
                     {
-                        if (envioDeCorreo.EnviarCorreo(nuevoJugador.CorreoJugador, codigoVerificacion))
+                        if (envioDeCorreo.EnviarCorreo(CorreoJugador, codigoVerificacion))
                         {
-                            Verificacion verificación = new Verificacion(codigoVerificacion, nuevoJugador);
+                            Usuario usuario = new Usuario()
+                            {
+                                NombreUsuario = NombreJugador,
+                                CorreoUsuario = CorreoJugador,
+                                ContraseñaUsuario = ContraseñaJugador
+                            };
+
+                            Verificacion verificación = new Verificacion(codigoVerificacion, usuario);
                             DesplegarVentana(verificación);
                         }
                         else
@@ -81,7 +89,7 @@ namespace LoterestTcs
             }
         }
 
-        private bool ValidarCorreo(string correoJugador)
+        private bool ValidarCorreo(String correoJugador)
         {
             bool correoValido = false;
 
@@ -117,32 +125,25 @@ namespace LoterestTcs
 
         private void IngresarButtonIniciarSesion_Click(object sender, RoutedEventArgs e)
         {
-            //JugadorRegistrado jugadorRegistrado = new JugadorRegistrado();
-            //jugadorRegistrado.NombreJugador = NombreTextBoxIniciarSesion.Text.Trim();
-            //jugadorRegistrado.ContraseñaJugador = ContaseñaBoxIniciarSesion.Password.Trim();
-
-            //if (ValidarDatosInicioSesion(jugadorRegistrado.NombreJugador, jugadorRegistrado.ContraseñaJugador))
-            //{
-            //    try
-            //    {
-            //        string ejecutar = cliente.IniciarSesion(jugadorRegistrado);
-            //        string mensaje = ejecutar.ToString();
-            //        MessageBox.Show(mensaje, "Inicio de sesión", MessageBoxButton.OK, MessageBoxImage.Information);
-            //        //Menu menu = new Menu(jugadorRegistrado.NombreJugador);
-            //        //DesplegarVentana(menu);
-            //    }
-            //    catch (EndpointNotFoundException)
-            //    {
-            //        MessageBox.Show("Servidor no disponible, intente más tarde", "Servidor no disponible", MessageBoxButton.OK, MessageBoxImage.Error);
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Algún campo se encuentra vacío, intente nuevamente", "Campos inválidos", MessageBoxButton.OK, MessageBoxImage.Error);
-            //}
-
-            Menu menu = new Menu(NombreTextBoxIniciarSesion.Text);
-            DesplegarVentana(menu);
+            string nombreUsuario = NombreTextBoxIniciarSesion.Text.Trim();
+            string contraseñaUsuario = ContraseñaBoxIniciarSesion.Password.Trim();
+            try
+            {
+                InstanceContext instanceContext = new InstanceContext(this);
+                UserManagerClient userManagerClient = new UserManagerClient(instanceContext);
+                if(ValidarDatosInicioSesion(nombreUsuario, contraseñaUsuario))
+                {
+                    userManagerClient.IniciarSesion(nombreUsuario, contraseñaUsuario);
+                }
+                else
+                {
+                    MessageBox.Show("Algún campo se encuentra vacío, intente nuevamente", "Campos inválidos", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            catch (EndpointNotFoundException)
+            {
+                MessageBox.Show("Operación inválida, intente nuevamente", "Operación inválida", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private bool ValidarDatosInicioSesion(string nombreJugador, string contraseñaJugador)
@@ -191,15 +192,55 @@ namespace LoterestTcs
         private void VerContraseñaIniciarSesion_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
         {
             VerContraseñaTextBoxIniciarSesión.Visibility = Visibility.Visible;
-            ContaseñaBoxIniciarSesion.Visibility = Visibility.Hidden;
-            VerContraseñaTextBoxIniciarSesión.Text = ContaseñaBoxIniciarSesion.Password;
+            ContraseñaBoxIniciarSesion.Visibility = Visibility.Hidden;
+            VerContraseñaTextBoxIniciarSesión.Text = ContraseñaBoxIniciarSesion.Password;
         }
 
         private void VerContraseñaIniciarSesion_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
             VerContraseñaTextBoxIniciarSesión.Visibility = Visibility.Hidden;
-            ContaseñaBoxIniciarSesion.Visibility = Visibility.Visible;
+            ContraseñaBoxIniciarSesion.Visibility = Visibility.Visible;
             VerContraseñaTextBoxIniciarSesión.Text = String.Empty;
+        }
+
+        public void Respuesta(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Iniciar sesión", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        public void DevuelveCuenta(Jugador jugador)
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+                Menu ventana = new Menu(jugador);
+                DesplegarVentana(ventana);
+
+            });
+        }
+
+        public void MensajeChat(string mensaje)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void MostrarPuntajes(PuntajeUsuario[] puntajesUsuarios)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RecibirConfirmacion(bool opcion, string nombreUsuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RecibirInvitacion(string nombreUsuario, string mensajeUsuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void FinPartida(string mensaje)
+        {
+            throw new NotImplementedException();
         }
     }
 }

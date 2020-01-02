@@ -14,14 +14,13 @@
             <Image HorizontalAlignment="Left" Height="620" VerticalAlignment="Top" Width="298" Source="/LoterestTcs;component/Recursos/fondoChat.png" Stretch="UniformToFill" Margin="2,22,0,0"/>
 
         </Grid>
-        <Button x:Name="buttonConectadoDesconectado" Click="Button_Click" Content="Chatear" HorizontalAlignment="Left" Margin="18,249,0,0" VerticalAlignment="Top" Width="267" Height="29" BorderBrush="{x:Null}" FontFamily="Calibri Light" FontWeight="Bold" FontSize="20" Background="#FF04547C" Foreground="White"/>
-        <TextBox x:Name="textBoxMensaje" HorizontalAlignment="Left" Height="28" Margin="18,572,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontFamily="Calibri Light" FontSize="16" Foreground="#FF04547C" BorderBrush="{x:Null}" KeyDown="TextBoxMensaje_KeyDown_1"/>
+        <Button x:Name="buttonConectadoDesconectado" Content="Chatear" HorizontalAlignment="Left" Margin="18,249,0,0" VerticalAlignment="Top" Width="267" Height="29" BorderBrush="{x:Null}" FontFamily="Calibri Light" FontWeight="Bold" FontSize="20" Background="#FF04547C" Foreground="White"/>
+        <TextBox x:Name="textBoxMensaje" HorizontalAlignment="Left" Height="28" Margin="18,572,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontFamily="Calibri Light" FontSize="16" Foreground="#FF04547C" BorderBrush="{x:Null}"/>
         <Rectangle HorizontalAlignment="Left" Height="280" Margin="18,283,0,0" VerticalAlignment="Top" Width="267">
             <Rectangle.Fill>
                 <SolidColorBrush Color="White" Opacity="0.7"/>
             </Rectangle.Fill>
         </Rectangle>
-        <ListBox x:Name="listBoxChat" HorizontalAlignment="Left" Height="262" Margin="28,293,0,0" VerticalAlignment="Top" Width="257" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="14" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
         <Button x:Name="buttonEnviar" Content="" HorizontalAlignment="Left" Margin="253,572,0,0" VerticalAlignment="Top" Width="33" Height="28" BorderBrush="{x:Null}" Click="ButtonEnviar_Click" RenderTransformOrigin="-4.917,0.554">
             <Button.Background>
                 <ImageBrush ImageSource="/LoterestTcs;component/Recursos/botonEnviar.png" Stretch="Uniform"/>
@@ -42,11 +41,18 @@
                 <SolidColorBrush Color="White" Opacity="0.75"/>
             </Rectangle.Fill>
         </Rectangle>
-        <ListBox x:Name="listBoxJugadoresDisponibles" HorizontalAlignment="Left" Height="284" Margin="439,177,0,0" VerticalAlignment="Top" Width="540" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="18" SelectionChanged="ListBoxJugadoresDisponibles_SelectionChanged"/>
+        <ListBox x:Name="listBoxJugadoresDisponibles" HorizontalAlignment="Left" Height="284" Margin="439,177,0,0" VerticalAlignment="Top" Width="540" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="18"/>
         <Button x:Name="JugarButton" Content="JUGAR" HorizontalAlignment="Left" Margin="419,520,0,0" VerticalAlignment="Top" Width="576" Height="65" FontFamily="Calibri Light" FontSize="48" Foreground="#FF04C4DC" BorderBrush="#FF04C4DC" Background="White" Click="JugarButton_Click"/>
         <Label Content="Jugadores disponibles" HorizontalAlignment="Left" Margin="421,79,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White"/>
         <Image Grid.Column="0" HorizontalAlignment="Left" Height="475" Margin="1077,155,-12.667,-1.333" VerticalAlignment="Top" Width="219" Source="/LoterestTcs;component/Recursos/cartasFondo.png"/>
         <Label x:Name="UsernameLabel" Content="User" HorizontalAlignment="Left" Margin="93,184,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White" IsEnabled="False"/>
+        <ListView x:Name="ChatListView" HorizontalAlignment="Left" Height="259" Margin="28,291,0,0" VerticalAlignment="Top" Width="247">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>

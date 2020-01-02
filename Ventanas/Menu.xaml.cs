@@ -1,4 +1,4 @@
-﻿using LoterestTcs.ServiceReference;
+﻿using LoterestTcs.ServiceReferenceLoterest;
 using System.Windows;
 
 namespace LoterestTcs.Ventanas
@@ -8,11 +8,11 @@ namespace LoterestTcs.Ventanas
     /// </summary>
     public partial class Menu : Window
     {
-
-        public Menu(string nombreJugador)
+        private Jugador jugador;
+        public Menu(Jugador jugadorRecuperado)
         {
             InitializeComponent();
-            NombreJugadorLabel.Content = nombreJugador;
+            NombreJugadorLabel.Content = jugadorRecuperado.NombreJugador;
         }
 
         private void LoteriaButtonMenu_Click(object sender, RoutedEventArgs e)
