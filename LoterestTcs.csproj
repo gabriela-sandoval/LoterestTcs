@@ -62,11 +62,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Idioma\Resources.es-MX.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.es-MX.resx</DependentUpon>
-    </Compile>
     <Compile Include="Model\Puntajes.cs" />
     <Compile Include="Model\TableroJuego.cs" />
     <Compile Include="Model\Usuario.cs" />
@@ -109,6 +104,10 @@
     <Compile Include="Ventanas\Verificacion.xaml.cs">
       <DependentUpon>Verificacion.xaml</DependentUpon>
     </Compile>
+    <Page Include="Idioma\Strings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -188,10 +187,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Idioma\Resources.es-MX.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.es-MX.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
