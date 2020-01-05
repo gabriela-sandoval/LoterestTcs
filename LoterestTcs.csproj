@@ -70,6 +70,9 @@
     <Compile Include="Model\Puntajes.cs" />
     <Compile Include="Model\TableroJuego.cs" />
     <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Ventanas\AcercaDe.xaml.cs">
+      <DependentUpon>AcercaDe.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\AlAzar.xaml.cs">
       <DependentUpon>AlAzar.xaml</DependentUpon>
     </Compile>
@@ -118,6 +121,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Ventanas\AcercaDe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Ventanas\AlAzar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

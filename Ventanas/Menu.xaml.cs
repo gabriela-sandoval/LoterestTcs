@@ -48,6 +48,11 @@ namespace LoterestTcs.Ventanas
             PuntajesJugadores puntajes = new PuntajesJugadores(jugador);
             DesplegarVentana(puntajes);
         }
+        private void AcercaDeButton_Click(object sender, RoutedEventArgs e)
+        {
+            AcercaDe acercaDe = new AcercaDe();
+            acercaDe.ShowDialog();
+        }
 
         private void AlAzarButton_Click(object sender, RoutedEventArgs e)
         {

@@ -43,3 +43,5 @@ C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\LoterestTcs.Idioma
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\es-MX\LoterestTcs.resources.dll
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\PuntajesJugadores.g.cs
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\PuntajesJugadores.baml
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\AcercaDe.g.cs
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ventanas\AcercaDe.baml
