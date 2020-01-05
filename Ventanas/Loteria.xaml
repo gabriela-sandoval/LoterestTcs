@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LoterestTcs.Ventanas"
         mc:Ignorable="d"
-        Title="Loteria" Height="658" Width="1290">
+        Title="LOTEREST - LoterÍa" Height="658" Width="1290" Icon="/LoterestTcs;component/Recursos/logoLoterest.png" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Window.Background>
         <ImageBrush ImageSource="/LoterestTcs;component/Recursos/fondoPrincipal.png"/>
     </Window.Background>
@@ -16,7 +16,7 @@
                 <ImageBrush ImageSource="/LoterestTcs;component/Recursos/regresar.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
-        <Image x:Name="CartaImage" HorizontalAlignment="Left" Height="263" Margin="150,91,0,0" VerticalAlignment="Top" Width="175" Source="/LoterestTcs;component/Cartas/04 Laptop.png"/>
+        <Image x:Name="CartaActualImage" HorizontalAlignment="Left" Height="263" Margin="150,91,0,0" VerticalAlignment="Top" Width="175" Source="/LoterestTcs;component/Cartas/03Profesor.png"/>
         <Label Content="Carta saliente:" HorizontalAlignment="Left" Margin="171,45,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="24"/>
         <Label Content="Tiempo:" HorizontalAlignment="Left" Margin="950,86,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="48" RenderTransformOrigin="6.062,-8.32"/>
         <Image x:Name="TableroImage" HorizontalAlignment="Left" Height="529" Margin="455,53,0,0" VerticalAlignment="Top" Width="377" Source="/LoterestTcs;component/Recursos/tableroVacio.png"/>

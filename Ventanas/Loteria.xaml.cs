@@ -68,7 +68,7 @@ namespace LoterestTcs.Ventanas
             for(int i = 1; i <=54; i++)
             {
                 image = new Image();
-                Uri uri = new Uri("LoterestTcs/Cartas/" + i.ToString() + ".png", UriKind.Relative);
+                Uri uri = new Uri("/LoterestTcs;component/Cartas/01Estudiante.png", UriKind.Relative);
                 image.Source = new BitmapImage(uri);
                 mazoCartas.Add(image);
             }
@@ -137,7 +137,7 @@ namespace LoterestTcs.Ventanas
 
         void CambiarCarta(int nuevoNumeroDeCarta)
         {
-            CartaImage.Source = mazoCartas[nuevoNumeroDeCarta].Source;
+            CartaActualImage.Source = mazoCartas[nuevoNumeroDeCarta].Source;
             numeroCartaActual++;
         }
 
@@ -151,7 +151,7 @@ namespace LoterestTcs.Ventanas
 
         private bool CompararCartas(Image image)
         {
-            if(CartaImage.Source.ToString().Equals(image.Source.ToString()))
+            if(CartaActualImage.Source.ToString().Equals(image.Source.ToString()))
             {
                 image.Opacity = .5;
                 return true;
@@ -245,7 +245,7 @@ namespace LoterestTcs.Ventanas
 
         public void DevuelveCuenta(Jugador jugador)
         {
-            throw new System.NotImplementedException();
+            this.jugador = jugador;
         }
 
         public void FinPartida(string mensaje)

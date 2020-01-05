@@ -40,8 +40,8 @@ namespace LoterestTcs.Ventanas
                 if(ValidarDatosIngresados(nuevoNombreUsuario, nuevaContraseña, repetirNuevaContraseña))
                 {
                     ModificarCuenta(nuevoNombreUsuario, nuevaContraseña);
-                    Menu menu = new Menu(jugador);
-                    DesplegarVentana(menu);
+                    MainWindow mainWindow = new MainWindow();
+                    DesplegarVentana(mainWindow);
                 }
                 else
                 {
