@@ -33,8 +33,18 @@ namespace LoterestTcs.Ventanas
 
         private void SalirButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            DesplegarVentana(mainWindow);
+            MessageBoxResult result = MessageBox.Show("¿Deseas salir? ¡Se cerrará tu sesión!", "Salir", MessageBoxButton.YesNo);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    MessageBox.Show("¡Que mal! Es una lastima que te vallas, ¡vuelve pronto!", "Salir");
+                    MainWindow mainWindow = new MainWindow();
+                    DesplegarVentana(mainWindow);
+                    break;
+                case MessageBoxResult.No:
+                    MessageBox.Show("¡Nos alegra que te quedes!, ahora a seguir en el juego", "Salir");
+                    break;
+            }
         }
 
         private void ConfiguracionButton_Click(object sender, RoutedEventArgs e)
