@@ -1,9 +1,15 @@
 ﻿
 
 FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\MainWindow.xaml;;
+FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\Ventanas\AlAzar.xaml;;
+FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\Ventanas\Carta.xaml;;
+FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\Ventanas\ConfirmacionDeInvitacion.xaml;;
+FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\Ventanas\EnviarInvitacion.xaml;;
 FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\Ventanas\Ganaste.xaml;;
 FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\Ventanas\Loteria.xaml;;
 FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\Ventanas\Menu.xaml;;
+FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\Ventanas\PerfilJugador.xaml;;
+FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\Ventanas\PuntajesJugadores.xaml;;
 FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\Ventanas\SalaChat.xaml;;
 FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\Ventanas\Tablero.xaml;;
 FC:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\Ventanas\Verificacion.xaml;;

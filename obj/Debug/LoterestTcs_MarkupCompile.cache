@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\App.xaml
-71349884308
+13-2122864954
 
-14-1793205983
+22-725991182
 16-1563998970
-MainWindow.xaml;Ventanas\Ganaste.xaml;Ventanas\Loteria.xaml;Ventanas\Menu.xaml;Ventanas\SalaChat.xaml;Ventanas\Tablero.xaml;Ventanas\Verificacion.xaml;
+MainWindow.xaml;Ventanas\AlAzar.xaml;Ventanas\Carta.xaml;Ventanas\ConfirmacionDeInvitacion.xaml;Ventanas\EnviarInvitacion.xaml;Ventanas\Ganaste.xaml;Ventanas\Loteria.xaml;Ventanas\Menu.xaml;Ventanas\PerfilJugador.xaml;Ventanas\PuntajesJugadores.xaml;Ventanas\SalaChat.xaml;Ventanas\Tablero.xaml;Ventanas\Verificacion.xaml;
 
 False
 

@@ -37,6 +37,9 @@ namespace LoterestTcs.ServiceReferenceLoterest {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> PuntajeJugadorField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> PuntajeJugadorAlAzarField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -108,6 +111,19 @@ namespace LoterestTcs.ServiceReferenceLoterest {
                 if ((this.PuntajeJugadorField.Equals(value) != true)) {
                     this.PuntajeJugadorField = value;
                     this.RaisePropertyChanged("PuntajeJugador");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> PuntajeJugadorAlAzar {
+            get {
+                return this.PuntajeJugadorAlAzarField;
+            }
+            set {
+                if ((this.PuntajeJugadorAlAzarField.Equals(value) != true)) {
+                    this.PuntajeJugadorAlAzarField = value;
+                    this.RaisePropertyChanged("PuntajeJugadorAlAzar");
                 }
             }
         }
@@ -236,16 +252,16 @@ namespace LoterestTcs.ServiceReferenceLoterest {
         System.Threading.Tasks.Task FinalizarJuegoAsync(string nombreUsuario, string remitente);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IUserManager/EnviarInvitacion")]
-        void EnviarInvitacion(string mensajeUsuario, string nombreUsuario, string remitente);
+        void EnviarInvitacion(string mensajeUsuario, string modoJuego, string nombreUsuario, string remitente);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IUserManager/EnviarInvitacion")]
-        System.Threading.Tasks.Task EnviarInvitacionAsync(string mensajeUsuario, string nombreUsuario, string remitente);
+        System.Threading.Tasks.Task EnviarInvitacionAsync(string mensajeUsuario, string modoJuego, string nombreUsuario, string remitente);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IUserManager/ConfirmarInvitacion")]
-        void ConfirmarInvitacion(bool opcion, string nombreUsuario, string remitente);
+        void ConfirmarInvitacion(bool opcion, string modoJuego, string nombreUsuario, string remitente);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IUserManager/ConfirmarInvitacion")]
-        System.Threading.Tasks.Task ConfirmarInvitacionAsync(bool opcion, string nombreUsuario, string remitente);
+        System.Threading.Tasks.Task ConfirmarInvitacionAsync(bool opcion, string modoJuego, string nombreUsuario, string remitente);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -264,10 +280,10 @@ namespace LoterestTcs.ServiceReferenceLoterest {
         void MostrarPuntajes(LoterestTcs.ServiceReferenceLoterest.PuntajeUsuario[] puntajesUsuarios);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IUserManager/RecibirConfirmacion")]
-        void RecibirConfirmacion(bool opcion, string nombreUsuario);
+        void RecibirConfirmacion(bool opcion, string nombreUsuario, string modoJuego);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IUserManager/RecibirInvitacion")]
-        void RecibirInvitacion(string nombreUsuario, string mensajeUsuario);
+        void RecibirInvitacion(string nombreUsuario, string mensajeUsuario, string modoJuego);
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IUserManager/FinPartida")]
         void FinPartida(string mensaje);
@@ -365,20 +381,20 @@ namespace LoterestTcs.ServiceReferenceLoterest {
             return base.Channel.FinalizarJuegoAsync(nombreUsuario, remitente);
         }
         
-        public void EnviarInvitacion(string mensajeUsuario, string nombreUsuario, string remitente) {
-            base.Channel.EnviarInvitacion(mensajeUsuario, nombreUsuario, remitente);
+        public void EnviarInvitacion(string mensajeUsuario, string modoJuego, string nombreUsuario, string remitente) {
+            base.Channel.EnviarInvitacion(mensajeUsuario, modoJuego, nombreUsuario, remitente);
         }
         
-        public System.Threading.Tasks.Task EnviarInvitacionAsync(string mensajeUsuario, string nombreUsuario, string remitente) {
-            return base.Channel.EnviarInvitacionAsync(mensajeUsuario, nombreUsuario, remitente);
+        public System.Threading.Tasks.Task EnviarInvitacionAsync(string mensajeUsuario, string modoJuego, string nombreUsuario, string remitente) {
+            return base.Channel.EnviarInvitacionAsync(mensajeUsuario, modoJuego, nombreUsuario, remitente);
         }
         
-        public void ConfirmarInvitacion(bool opcion, string nombreUsuario, string remitente) {
-            base.Channel.ConfirmarInvitacion(opcion, nombreUsuario, remitente);
+        public void ConfirmarInvitacion(bool opcion, string modoJuego, string nombreUsuario, string remitente) {
+            base.Channel.ConfirmarInvitacion(opcion, modoJuego, nombreUsuario, remitente);
         }
         
-        public System.Threading.Tasks.Task ConfirmarInvitacionAsync(bool opcion, string nombreUsuario, string remitente) {
-            return base.Channel.ConfirmarInvitacionAsync(opcion, nombreUsuario, remitente);
+        public System.Threading.Tasks.Task ConfirmarInvitacionAsync(bool opcion, string modoJuego, string nombreUsuario, string remitente) {
+            return base.Channel.ConfirmarInvitacionAsync(opcion, modoJuego, nombreUsuario, remitente);
         }
     }
 }

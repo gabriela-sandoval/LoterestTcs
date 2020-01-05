@@ -90,7 +90,8 @@ namespace LoterestTcs.Ventanas
                     NombreJugador = usuarioCreado.NombreUsuario,
                     CorreoJugador = usuarioCreado.CorreoUsuario,
                     ContraseñaJugador = usuarioCreado.ContraseñaUsuario,
-                    PuntajeJugador = 0
+                    PuntajeJugador = 0,
+                    PuntajeJugadorAlAzar = 0
                 };
 
                 userManagerClient.CrearCuentaJugador(jugador);
@@ -127,12 +128,12 @@ namespace LoterestTcs.Ventanas
             throw new NotImplementedException();
         }
 
-        public void RecibirConfirmacion(bool opcion, string nombreUsuario)
+        public void RecibirConfirmacion(bool opcion, string nombreUsuario, string modoJuego)
         {
             throw new NotImplementedException();
         }
 
-        public void RecibirInvitacion(string nombreUsuario, string mensajeUsuario)
+        public void RecibirInvitacion(string nombreUsuario, string mensajeUsuario, string modoJuego)
         {
             throw new NotImplementedException();
         }

@@ -12,7 +12,7 @@ namespace LoterestTcs.Model
         public string CorreoUsuario { get; set; }
         public string ContraseñaUsuario { get; set; }
         public int? PuntajeUsuario { get; set; }
+        public int? PuntajeUsuarioAlAzar { get; set; }
         public TableroJuego TableroJuego { get; set; }
-
     }
 }

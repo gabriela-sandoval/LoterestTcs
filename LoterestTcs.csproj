@@ -62,8 +62,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Idioma\Resources.es-MX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.es-MX.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Puntajes.cs" />
     <Compile Include="Model\TableroJuego.cs" />
     <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Ventanas\AlAzar.xaml.cs">
+      <DependentUpon>AlAzar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Carta.xaml.cs">
+      <DependentUpon>Carta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\ConfirmacionDeInvitacion.xaml.cs">
+      <DependentUpon>ConfirmacionDeInvitacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\EnviarInvitacion.xaml.cs">
+      <DependentUpon>EnviarInvitacion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Ganaste.xaml.cs">
       <DependentUpon>Ganaste.xaml</DependentUpon>
     </Compile>
@@ -72,6 +90,12 @@
     </Compile>
     <Compile Include="Ventanas\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\PerfilJugador.xaml.cs">
+      <DependentUpon>PerfilJugador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\PuntajesJugadores.xaml.cs">
+      <DependentUpon>PuntajesJugadores.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\SalaChat.xaml.cs">
       <DependentUpon>SalaChat.xaml</DependentUpon>
@@ -94,6 +118,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Ventanas\AlAzar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\Carta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\ConfirmacionDeInvitacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\EnviarInvitacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Ventanas\Ganaste.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,6 +143,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Ventanas\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\PerfilJugador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventanas\PuntajesJugadores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -133,6 +181,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Idioma\Resources.es-MX.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.es-MX.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -198,60 +250,60 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Cartas\01 Estudiantes.png" />
-    <Resource Include="Cartas\02 Mochila.png" />
-    <Resource Include="Cartas\03 Profesor.png" />
-    <Resource Include="Cartas\04 Laptop.png" />
-    <Resource Include="Cartas\05 Libro.png" />
-    <Resource Include="Cartas\06 Colores.png" />
-    <Resource Include="Cartas\07 Reglas.png" />
-    <Resource Include="Cartas\08 Tijeras.png" />
-    <Resource Include="Cartas\09 Marcatextos.png" />
-    <Resource Include="Cartas\10 Pupitre.png" />
-    <Resource Include="Cartas\11 MemoriaUsb.png" />
-    <Resource Include="Cartas\12 Pantalla.png" />
-    <Resource Include="Cartas\13 Boligráfo.png" />
-    <Resource Include="Cartas\14 Hoja.png" />
-    <Resource Include="Cartas\15 Libreta.png" />
-    <Resource Include="Cartas\16 Nota.png" />
-    <Resource Include="Cartas\17 Ratón.png" />
-    <Resource Include="Cartas\18 Pinceles.png" />
-    <Resource Include="Cartas\19 Cuter.png" />
-    <Resource Include="Cartas\20 Audifonos.png" />
-    <Resource Include="Cartas\21 CintaAdhesiva.png" />
-    <Resource Include="Cartas\22 BoteDeBasura.png" />
-    <Resource Include="Cartas\23 Señalamientos.png" />
-    <Resource Include="Cartas\24 Proyector.png" />
-    <Resource Include="Cartas\25 Lentes.png" />
-    <Resource Include="Cartas\26 Celular.png" />
-    <Resource Include="Cartas\27 VideoJuego.png" />
-    <Resource Include="Cartas\28 BotellaDeAgua.png" />
-    <Resource Include="Cartas\29 Sandwich.png" />
-    <Resource Include="Cartas\30 Dulces.png" />
-    <Resource Include="Cartas\31 Calculadora.png" />
-    <Resource Include="Cartas\32 TablaPeriodica.png" />
-    <Resource Include="Cartas\33 Acordeón.png" />
-    <Resource Include="Cartas\34 Computadora.png" />
-    <Resource Include="Cartas\35 Transportador.png" />
-    <Resource Include="Cartas\36 Pizarrón.png" />
-    <Resource Include="Cartas\37 Mapa.png" />
-    <Resource Include="Cartas\38 CableHdmi.png" />
-    <Resource Include="Cartas\39 Compás.png" />
-    <Resource Include="Cartas\40 Cartulina.png" />
-    <Resource Include="Cartas\41 Plastilina.png" />
-    <Resource Include="Cartas\42 Televisión.png" />
-    <Resource Include="Cartas\43 Biblioteca.png" />
-    <Resource Include="Cartas\44 Aula.png" />
-    <Resource Include="Cartas\45 Director.png" />
-    <Resource Include="Cartas\46 Cancha.png" />
-    <Resource Include="Cartas\47 Jardín.png" />
-    <Resource Include="Cartas\48 Bicicleta.png" />
-    <Resource Include="Cartas\49 Caferería.png" />
-    <Resource Include="Cartas\50 Secretaria.png" />
-    <Resource Include="Cartas\51 Clip.png" />
-    <Resource Include="Cartas\52 Perro.png" />
-    <Resource Include="Cartas\53 Trofeo.png" />
-    <Resource Include="Cartas\54 Horario.png" />
+    <Resource Include="Cartas\01Estudiantes.png" />
+    <Resource Include="Cartas\02Mochila.png" />
+    <Resource Include="Cartas\03Profesor.png" />
+    <Resource Include="Cartas\04Laptop.png" />
+    <Resource Include="Cartas\05Libro.png" />
+    <Resource Include="Cartas\06Colores.png" />
+    <Resource Include="Cartas\07Reglas.png" />
+    <Resource Include="Cartas\08Tijeras.png" />
+    <Resource Include="Cartas\09Marcatextos.png" />
+    <Resource Include="Cartas\10Pupitre.png" />
+    <Resource Include="Cartas\11MemoriaUsb.png" />
+    <Resource Include="Cartas\12Pantalla.png" />
+    <Resource Include="Cartas\13Boligráfo.png" />
+    <Resource Include="Cartas\14Hoja.png" />
+    <Resource Include="Cartas\15Libreta.png" />
+    <Resource Include="Cartas\16Nota.png" />
+    <Resource Include="Cartas\17Ratón.png" />
+    <Resource Include="Cartas\18Pinceles.png" />
+    <Resource Include="Cartas\19Cuter.png" />
+    <Resource Include="Cartas\20Audifonos.png" />
+    <Resource Include="Cartas\21CintaAdhesiva.png" />
+    <Resource Include="Cartas\22BoteDeBasura.png" />
+    <Resource Include="Cartas\23Señalamientos.png" />
+    <Resource Include="Cartas\24Proyector.png" />
+    <Resource Include="Cartas\25Lentes.png" />
+    <Resource Include="Cartas\26Celular.png" />
+    <Resource Include="Cartas\27VideoJuego.png" />
+    <Resource Include="Cartas\28BotellaDeAgua.png" />
+    <Resource Include="Cartas\29Sandwich.png" />
+    <Resource Include="Cartas\30Dulces.png" />
+    <Resource Include="Cartas\31Calculadora.png" />
+    <Resource Include="Cartas\32TablaPeriodica.png" />
+    <Resource Include="Cartas\33Acordeón.png" />
+    <Resource Include="Cartas\34Computadora.png" />
+    <Resource Include="Cartas\35Transportador.png" />
+    <Resource Include="Cartas\36Pizarrón.png" />
+    <Resource Include="Cartas\37Mapa.png" />
+    <Resource Include="Cartas\38CableHdmi.png" />
+    <Resource Include="Cartas\39Compás.png" />
+    <Resource Include="Cartas\40Cartulina.png" />
+    <Resource Include="Cartas\41Plastilina.png" />
+    <Resource Include="Cartas\42Televisión.png" />
+    <Resource Include="Cartas\43Biblioteca.png" />
+    <Resource Include="Cartas\44Aula.png" />
+    <Resource Include="Cartas\45Director.png" />
+    <Resource Include="Cartas\46Cancha.png" />
+    <Resource Include="Cartas\47Jardín.png" />
+    <Resource Include="Cartas\48Bicicleta.png" />
+    <Resource Include="Cartas\49Caferería.png" />
+    <Resource Include="Cartas\50Secretaria.png" />
+    <Resource Include="Cartas\51Clip.png" />
+    <Resource Include="Cartas\52Perro.png" />
+    <Resource Include="Cartas\53Trofeo.png" />
+    <Resource Include="Cartas\54Horario.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServiceReferenceLoterest\item.disco" />
@@ -267,6 +319,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Recursos\Configuracion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

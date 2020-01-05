@@ -65,6 +65,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="mensajeUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="modoJuego" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="nombreUsuario" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="remitente" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -74,6 +75,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="opcion" type="xs:boolean" />
+        <xs:element minOccurs="0" name="modoJuego" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="nombreUsuario" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="remitente" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -112,6 +114,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="opcion" type="xs:boolean" />
         <xs:element minOccurs="0" name="nombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="modoJuego" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -120,6 +123,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="nombreUsuario" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="mensajeUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="modoJuego" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

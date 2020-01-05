@@ -1,11 +1,11 @@
-﻿<Window x:Class="LoterestTcs.Ventanas.SalaChat"
+﻿<Window x:Name="SalaChatWindow" x:Class="LoterestTcs.Ventanas.SalaChat"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LoterestTcs.Ventanas"
         mc:Ignorable="d"
-        Title="SalaChat" Height="658" Width="1290" MinWidth="1290" MinHeight="658" HorizontalAlignment="Center" VerticalAlignment="Center">
+        Title="LOTEREST - Chat" Height="658" Width="1290" MinWidth="1290" MinHeight="658" HorizontalAlignment="Center" VerticalAlignment="Center" Icon="/LoterestTcs;component/Recursos/logoLoterest.png" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/LoterestTcs;component/Recursos/fondoPrincipal.png"/>
@@ -15,7 +15,7 @@
 
         </Grid>
         <Button x:Name="buttonConectadoDesconectado" Content="Chatear" HorizontalAlignment="Left" Margin="18,249,0,0" VerticalAlignment="Top" Width="267" Height="29" BorderBrush="{x:Null}" FontFamily="Calibri Light" FontWeight="Bold" FontSize="20" Background="#FF04547C" Foreground="White"/>
-        <TextBox x:Name="textBoxMensaje" HorizontalAlignment="Left" Height="28" Margin="18,572,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontFamily="Calibri Light" FontSize="16" Foreground="#FF04547C" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="MensajeTextBox" HorizontalAlignment="Left" Height="28" Margin="18,572,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontFamily="Calibri Light" FontSize="16" Foreground="#FF04547C" BorderBrush="{x:Null}"/>
         <Rectangle HorizontalAlignment="Left" Height="280" Margin="18,283,0,0" VerticalAlignment="Top" Width="267">
             <Rectangle.Fill>
                 <SolidColorBrush Color="White" Opacity="0.7"/>
@@ -41,18 +41,18 @@
                 <SolidColorBrush Color="White" Opacity="0.75"/>
             </Rectangle.Fill>
         </Rectangle>
-        <ListBox x:Name="listBoxJugadoresDisponibles" HorizontalAlignment="Left" Height="284" Margin="439,177,0,0" VerticalAlignment="Top" Width="540" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="18"/>
-        <Button x:Name="JugarButton" Content="JUGAR" HorizontalAlignment="Left" Margin="419,520,0,0" VerticalAlignment="Top" Width="576" Height="65" FontFamily="Calibri Light" FontSize="48" Foreground="#FF04C4DC" BorderBrush="#FF04C4DC" Background="White" Click="JugarButton_Click"/>
-        <Label Content="Jugadores disponibles" HorizontalAlignment="Left" Margin="421,79,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White"/>
+        <Label Content="Reglas" HorizontalAlignment="Left" Margin="425,79,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White"/>
         <Image Grid.Column="0" HorizontalAlignment="Left" Height="475" Margin="1077,155,-12.667,-1.333" VerticalAlignment="Top" Width="219" Source="/LoterestTcs;component/Recursos/cartasFondo.png"/>
         <Label x:Name="UsernameLabel" Content="User" HorizontalAlignment="Left" Margin="93,184,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White" IsEnabled="False"/>
-        <ListView x:Name="ChatListView" HorizontalAlignment="Left" Height="259" Margin="28,291,0,0" VerticalAlignment="Top" Width="247">
+        <ListView x:Name="ChatListView" HorizontalAlignment="Left" Height="259" Margin="28,295,0,0" VerticalAlignment="Top" Width="247">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
         </ListView>
+        <Label x:Name="___Sin_nombre_" Content="El juego comienza en:" HorizontalAlignment="Left" Margin="434,506,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="TiempoLabel" Content="" HorizontalAlignment="Left" Margin="871,509,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White" Width="158"/>
 
     </Grid>
 </Window>

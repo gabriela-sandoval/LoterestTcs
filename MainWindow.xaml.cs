@@ -212,9 +212,9 @@ namespace LoterestTcs
         {
             this.Dispatcher.Invoke(() =>
             {
-                Menu ventana = new Menu(jugador);
-                DesplegarVentana(ventana);
-
+                this.jugador = jugador;
+                Menu menu = new Menu(jugador);
+                DesplegarVentana(menu);
             });
         }
 
@@ -228,19 +228,66 @@ namespace LoterestTcs
             throw new NotImplementedException();
         }
 
-        public void RecibirConfirmacion(bool opcion, string nombreUsuario)
+        public void RecibirConfirmacion(bool opcion, string nombreUsuario, string modoJuego)
         {
-            throw new NotImplementedException();
+            if(opcion == true)
+            {
+                if(modoJuego.Equals("Loteria"))
+                {
+                    MessageBox.Show("Se aceptó tu invitación", "Confirmación", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Dispatcher.Invoke(() =>
+                    {
+                        Tablero tablero = new Tablero(jugador, 60, nombreUsuario);
+                        this.Close();
+                        tablero.Show();
+                    });
+                }
+
+                if(modoJuego.Equals("AlAzar"))
+                {
+                    MessageBox.Show("Se aceptó tu invitación", "Confirmación", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Dispatcher.Invoke(() =>
+                    {
+                        Carta carta = new Carta(jugador, 60, nombreUsuario);
+                        this.Close();
+                        carta.Show();
+                    });
+                }
+            }
+            else
+            {
+                MessageBox.Show("No aceptó tu invitación", "Confirmación", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
-        public void RecibirInvitacion(string nombreUsuario, string mensajeUsuario)
+        public void RecibirInvitacion(string nombreUsuario, string mensajeUsuario, string modoJuego)
         {
-            throw new NotImplementedException();
+            Dispatcher.Invoke(() =>
+            {
+                ConfirmacionDeInvitacion confirmacionDeInvitacion = new ConfirmacionDeInvitacion(jugador, nombreUsuario, modoJuego, mensajeUsuario);
+                DesplegarVentana(confirmacionDeInvitacion);
+            });
         }
 
         public void FinPartida(string mensaje)
         {
-            throw new NotImplementedException();
+            MessageBox.Show(mensaje, "Fin partida", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void IdiomaComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            string idioma = IdiomaComboBox.Text.Trim();
+
+            if(idioma.Equals("ES Español"))
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("es-MX");
+            }else
+            {
+                if(idioma.Equals("EN English"))
+                {
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
+                }
+            }
         }
     }
 }

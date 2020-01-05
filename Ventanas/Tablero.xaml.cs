@@ -1,4 +1,5 @@
 ﻿using LoterestTcs.Model;
+using LoterestTcs.ServiceReferenceLoterest;
 using System;
 using System.Collections.Generic;
 using System.Windows;
@@ -21,15 +22,23 @@ namespace LoterestTcs.Ventanas
         private List<Image> imagenesOcultas = new List<Image>();
         private List<Image> imagenesSeleccionadas = new List<Image>();
         private TableroJuego tableroJuego;
+        private Jugador jugador;
+        private string nombreUsuario;
+        private string modoJuego = "Loteria";
         private const int CANTIDADCARTAS = 16;
         private const int TIEMPOPARAELEGIRCARTAS = 0;
-        public Tablero(int tiempo)
+
+
+        public Tablero(Jugador jugador, int tiempo, string nombreInvitado)
         {
             InitializeComponent();
+            NombreJugadorLabel.Content = "Jugador: " + jugador.NombreJugador;
             CartasDisponibles();
             tiempoDisponible = tiempo;
+            this.nombreUsuario = nombreInvitado;
+            this.jugador = jugador;
             LugaresTablero();
-            
+            CuentaRegresiva();
         }
 
         private void CartasDisponibles()
@@ -38,7 +47,7 @@ namespace LoterestTcs.Ventanas
             for (int i = 1; i <= 52; i++)
             {
                 image = new Image();
-                Uri uri = new Uri("Cartas/" + i.ToString() + ".png", UriKind.Relative);
+                Uri uri = new Uri("LoterestTcs/Cartas/" + i.ToString() + ".png", UriKind.Relative);
                 image.Source = new BitmapImage(uri);
                 imagenesDisponibles.Add(image);
             }
@@ -166,17 +175,23 @@ namespace LoterestTcs.Ventanas
                 if (imagenesOcultas.Count < CANTIDADCARTAS)
                 {
                     GenerarTableroAleatorio();
-                    tableroJuego.CartasDeTabla= imagenesSeleccionadas;
-                    //Chat ventana = new Chat(tabla, cuenta, nombreUsuario);
-                    //DesplegarVentana(ventana);
+                    tableroJuego.CartasDeTabla = imagenesSeleccionadas;
+                    SalaChat salaChat = new SalaChat(tableroJuego, jugador, nombreUsuario, modoJuego);
+                    DesplegarVentana(salaChat);
                 }
                 else
                 {
                     tableroJuego.CartasDeTabla = imagenesSeleccionadas;
-                    //Chat ventana = new Chat(tabla, cuenta, nombreUsuario);
-                    //DesplegarVentana(ventana);
+                    SalaChat salaChat = new SalaChat(tableroJuego, jugador, nombreUsuario, modoJuego);
+                    DesplegarVentana(salaChat);
                 }
             }
+        }
+
+        private void DesplegarVentana(Window window)
+        {
+            window.Show();
+            this.Close();
         }
 
         private void Image1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -531,9 +546,8 @@ namespace LoterestTcs.Ventanas
 
         private void RegresarButton_Click(object sender, RoutedEventArgs e)
         {
-            //Menu menu = new Menu("Prueba");
-            //menu.Show();
-            //this.Close();
+            Menu menu = new Menu(jugador);
+            DesplegarVentana(menu);
         }
     }
 }
