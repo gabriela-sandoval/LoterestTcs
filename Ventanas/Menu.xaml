@@ -20,17 +20,12 @@
                 <SolidColorBrush Color="#FF04C4DC" Opacity="0.5"/>
             </Button.Background>
         </Button>
-        <Button x:Name="buttonComoJugar" Content="¿CÓMO JUGAR?" HorizontalAlignment="Left" Margin="1,386,0,0" VerticalAlignment="Top" Width="248" Height="50" FontFamily="Calibri Light" FontSize="36" FontWeight="Bold" BorderBrush="White" Foreground="White">
+        <Button x:Name="AcercaDeButton" Content="ACERCA DE" HorizontalAlignment="Left" Margin="1,382,0,0" VerticalAlignment="Top" Width="248" Height="50" FontFamily="Calibri Light" FontSize="36" FontWeight="Bold" BorderBrush="White" Foreground="White" Click="AcercaDeButton_Click">
             <Button.Background>
                 <SolidColorBrush Color="#FF04C4DC" Opacity="0.5"/>
             </Button.Background>
         </Button>
-        <Button x:Name="AcercaDeButton" Content="ACERCA DE" HorizontalAlignment="Left" Margin="1,446,0,0" VerticalAlignment="Top" Width="248" Height="50" FontFamily="Calibri Light" FontSize="36" FontWeight="Bold" BorderBrush="White" Foreground="White" Click="AcercaDeButton_Click">
-            <Button.Background>
-                <SolidColorBrush Color="#FF04C4DC" Opacity="0.5"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="SalirButton" Content="SALIR" HorizontalAlignment="Left" Margin="1,505,0,0" VerticalAlignment="Top" Width="248" Height="50" FontFamily="Calibri Light" FontSize="36" FontWeight="Bold" BorderBrush="White" Foreground="White" Click="SalirButton_Click">
+        <Button x:Name="SalirButton" Content="SALIR" HorizontalAlignment="Left" Margin="1,546,0,0" VerticalAlignment="Top" Width="248" Height="50" FontFamily="Calibri Light" FontSize="36" FontWeight="Bold" BorderBrush="White" Foreground="White" Click="SalirButton_Click">
             <Button.Background>
                 <SolidColorBrush Color="#FF04C4DC" Opacity="0.5"/>
             </Button.Background>

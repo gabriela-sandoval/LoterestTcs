@@ -66,8 +66,8 @@ namespace LoterestTcs.Ventanas
 
         private void AlAzarButton_Click(object sender, RoutedEventArgs e)
         {
-            EnviarInvitacion enviarInvitacion = new EnviarInvitacion(jugador, "AlAzar");
-            DesplegarVentana(enviarInvitacion);
+            AlAzar alAzar = new AlAzar(jugador, 60, "Invitado");
+            DesplegarVentana(alAzar);
         }
 
         public void Respuesta(string mensaje)
