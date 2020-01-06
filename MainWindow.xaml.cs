@@ -1,21 +1,24 @@
-﻿using System;
+﻿using CorreoDeVerificacion;
+using LoterestTcs.Model;
+using LoterestTcs.ServiceReferenceLoterest;
+using System;
 using System.ServiceModel;
 using System.Windows;
-using CorreoDeVerificacion;
-using LoterestTcs.Ventanas;
-using LoterestTcs.ServiceReferenceLoterest;
-using System.Threading.Tasks;
-using LoterestTcs.Model;
 
 namespace LoterestTcs
 {
     [CallbackBehavior(UseSynchronizationContext = false)]
     /// <summary>
     /// Lógica de interacción para MainWindow.xaml
+    /// Ventana principal en la que se muestra el inicio de sesión y el registro del jugador.
     /// </summary>
     public partial class MainWindow : Window, IUserManagerCallback
     {
         private Jugador jugador;
+
+        /// <summary>
+        /// Inicialización de componentes de ventana MainWindow.
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -131,7 +134,7 @@ namespace LoterestTcs
             {
                 InstanceContext instanceContext = new InstanceContext(this);
                 UserManagerClient userManagerClient = new UserManagerClient(instanceContext);
-                if(ValidarDatosInicioSesion(nombreUsuario, contraseñaUsuario))
+                if (ValidarDatosInicioSesion(nombreUsuario, contraseñaUsuario))
                 {
                     userManagerClient.IniciarSesion(nombreUsuario, contraseñaUsuario);
                 }
@@ -203,11 +206,19 @@ namespace LoterestTcs
             VerContraseñaTextBoxIniciarSesión.Text = String.Empty;
         }
 
+        /// <summary>
+        /// Implementación de interfaz  de IUserManagerCallback.
+        /// </summary>
+        /// <param name="mensaje">Recibe un parametro mensaje de tipo string</param>
         public void Respuesta(string mensaje)
         {
             MessageBox.Show(mensaje, "Iniciar sesión", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
+        /// <summary>
+        /// Implementación de interfaz  de IUserManagerCallback.
+        /// </summary>
+        /// <param name="jugador">Recibe un parametro jugador de tipo jugador</param>
         public void DevuelveCuenta(Jugador jugador)
         {
             this.Dispatcher.Invoke(() =>
@@ -228,11 +239,17 @@ namespace LoterestTcs
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Implementación de interfaz  de IUserManagerCallback.
+        /// </summary>
+        /// <param name="opcion">Recibe un parametro opcion de tipo bool</param>
+        /// <param name="nombreUsuario">Recibe un parametro nombre de usuario de tipo string</param>
+        /// <param name="modoJuego">Recibe un parametro modo de juego de tipo string</param>
         public void RecibirConfirmacion(bool opcion, string nombreUsuario, string modoJuego)
         {
-            if(opcion == true)
+            if (opcion == true)
             {
-                if(modoJuego.Equals("Loteria"))
+                if (modoJuego.Equals("Loteria"))
                 {
                     MessageBox.Show("Se aceptó tu invitación", "Confirmación", MessageBoxButton.OK, MessageBoxImage.Information);
                     Dispatcher.Invoke(() =>
@@ -243,14 +260,14 @@ namespace LoterestTcs
                     });
                 }
 
-                if(modoJuego.Equals("AlAzar"))
+                if (modoJuego.Equals("AlAzar"))
                 {
                     MessageBox.Show("Se aceptó tu invitación", "Confirmación", MessageBoxButton.OK, MessageBoxImage.Information);
                     Dispatcher.Invoke(() =>
                     {
-                        Carta carta = new Carta(jugador, 60, nombreUsuario);
+                        AlAzar alAzar = new AlAzar(jugador, 60, nombreUsuario);
                         this.Close();
-                        carta.Show();
+                        alAzar.Show();
                     });
                 }
             }
@@ -260,6 +277,12 @@ namespace LoterestTcs
             }
         }
 
+        /// <summary>
+        /// Implementación de interfaz  de IUserManagerCallback.
+        /// </summary>
+        /// <param name="nombreUsuario">Recibe un parametro nombre de usuario de tipo string</param>
+        /// <param name="mensajeUsuario">Recibe un parametro mensaje usuario de tipo string</param>
+        /// <param name="modoJuego">Recibe un parametro modo de juego de tipo string</param>
         public void RecibirInvitacion(string nombreUsuario, string mensajeUsuario, string modoJuego)
         {
             Dispatcher.Invoke(() =>
@@ -278,12 +301,13 @@ namespace LoterestTcs
         {
             string idioma = IdiomaComboBox.Text.Trim();
 
-            if(idioma.Equals("ES Español"))
+            if (idioma.Equals("ES Español"))
             {
                 System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("es-MX");
-            }else
+            }
+            else
             {
-                if(idioma.Equals("EN English"))
+                if (idioma.Equals("EN English"))
                 {
                     System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
                 }

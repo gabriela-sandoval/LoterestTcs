@@ -1,0 +1,58 @@
+﻿<Window x:Name="PuntajeWindow" x:Class="LoterestTcs.PuntajesJugadores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoterestTcs"
+        mc:Ignorable="d"
+        Title="LOTEREST - Puntajes" Height="654" Width="1290" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" WindowState="Maximized" Icon="/LoterestTcs;component/Recursos/logoLoterest.png">
+    <Window.Background>
+        <ImageBrush ImageSource="/LoterestTcs;component/Recursos/fondoPrincipal.png"/>
+    </Window.Background>
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="156" VerticalAlignment="Top" Width="1283" Margin="0,27,0,0">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FF04C4DC" Opacity="0.75"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image HorizontalAlignment="Left" Height="144" Margin="132,48,0,0" VerticalAlignment="Top" Width="158" RenderTransformOrigin="0.041,0.212" Source="/LoterestTcs;component/Recursos/imagenUsuarioCamaleon.png"/>
+        <Label x:Name="NombreJugadorLabel" HorizontalAlignment="Left" Height="79" Margin="343,77,0,0" Content="" VerticalAlignment="Top" Width="240" FontFamily="Calibri Light" FontSize="48" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Label x:Name="PuntajeLabel" HorizontalAlignment="Left" Margin="858,58,0,0" Content="Puntaje" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="72" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="334" Margin="201,239,0,0" VerticalAlignment="Top" Width="387">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FF6CDC70" Opacity="0.75"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="334" Margin="697,239,0,0" VerticalAlignment="Top" Width="387">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FFF48884" Opacity="0.75"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label x:Name="LoteriaLabel" HorizontalAlignment="Left" Height="69" Margin="220,266,0,0" Content="Loteria" VerticalAlignment="Top" Width="350" FontFamily="Calibri Light" FontSize="48" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Label x:Name="AlAzarLabel" HorizontalAlignment="Left" Height="69" Margin="715,266,0,0" Content="Al azar" VerticalAlignment="Top" Width="350" FontFamily="Calibri Light" FontSize="48" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Button x:Name="RegresarButton" Content="" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="70" Height="70" BorderBrush="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.028,0.087" Click="RegresarButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/LoterestTcs;component/Recursos/regresar.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <ListView x:Name="PuntajeLoteriaListView" HorizontalAlignment="Left" Height="216" Margin="220,340,0,0" VerticalAlignment="Top" Width="350" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="16">
+            <ListView.View>
+                <GridView AllowsColumnReorder="False">
+                    <GridViewColumn Header="Nombre jugador"  DisplayMemberBinding="{Binding NombreUsuario}" Width="170"/>
+                    <GridViewColumn Header="Puntaje"  DisplayMemberBinding="{Binding PuntajeUsuario}" Width="170"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="PuntajeAlAzarListView" HorizontalAlignment="Left" Height="216" Margin="718,340,0,0" VerticalAlignment="Top" Width="350" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="16">
+            <ListView.View>
+                <GridView AllowsColumnReorder="False">
+                    <GridViewColumn Header="Nombre jugador"  DisplayMemberBinding="{Binding NombreUsuario}" Width="170"/>
+                    <GridViewColumn Header="Puntaje"  DisplayMemberBinding="{Binding PuntajeUsuario}" Width="170"/>
+                </GridView>
+            </ListView.View>
+            <Image Height="100" Width="100"/>
+        </ListView>
+        <Image HorizontalAlignment="Left" Height="138" Margin="718,384,0,0" VerticalAlignment="Top" Width="350" Source="Recursos/EnConstruccion.png"/>
+
+    </Grid>
+</Window>
