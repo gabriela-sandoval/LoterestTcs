@@ -2,7 +2,6 @@
 using LoterestTcs.Model;
 using LoterestTcs.ServiceReferenceLoterest;
 using System;
-using System.Linq;
 using System.ServiceModel;
 using System.Windows;
 

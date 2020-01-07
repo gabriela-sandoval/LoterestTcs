@@ -59,9 +59,9 @@
     <system:String x:Key="InstruccionVerificacion">Acabamos de enviarte un código de verificación a tu correo electrónico, ingrésalo aquí:</system:String>
     <system:String x:Key="Verificar">Verificar</system:String>
     <system:String x:Key="LlenarCampos">Llena los siguientes campos para completar tu registro.</system:String>
-    <system:String x:Key="OperacionInvalida">En este momento no se puede procesar tu solicutud, intentelo más tarde.</system:String>
+    <system:String x:Key="OperacionInvalida">En este momento no se puede procesar tu solicitud, inténtelo más tarde.</system:String>
     <system:String x:Key="CredencialesInvalidas">El nombre de usuario o la contrasña son incorrectos</system:String>
-    <system:String x:Key="DatosInvalidos">No puedes dejar campos vacios, llenar con espacios ni sobrepasar los siguientes limite de caracteres permitidos: Nombre de usuario: 30 y Contraseña 40</system:String>
+    <system:String x:Key="DatosInvalidos">No puedes dejar campos vacíos, llenar con espacios ni sobrepasar los siguientes límite de caracteres permitidos: Nombre de usuario: 30 y Contraseña 40</system:String>
     <system:String x:Key="ErrorEnvioDeCorreo">Ocurrió algo inesperado al enviar tu código de verificación, intentalo nuevamente.</system:String>
     <system:String x:Key="CodigoIncorrecto">El código ingresado no es válido, debe coincidir con el que enviamos a tu correo electrónico.</system:String>
     <system:String x:Key="DatosInvalidosVerificacion">No puede dejar campos vacios, llenar con espacios ni sobrepasar el suiguiente limite de caracteres permitidos: CÓDIGO 6</system:String>
