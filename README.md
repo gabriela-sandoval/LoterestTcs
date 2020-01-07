@@ -16,10 +16,9 @@ Este juego es realizado para la Experiencia Educativa de Tecnologías para la Co
 
 ## Herramientas de creación :wrench:
 - Visual Studio
-  - WCF
   - WPF
   - Entity Framework
-- MySql
+- SqlServer
 
 ## Autor :woman:
 - Gabriela Sandoval Cruz
