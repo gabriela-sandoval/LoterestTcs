@@ -12,15 +12,14 @@
             <ColumnDefinition Width="541*"/>
         </Grid.ColumnDefinitions>
         <Rectangle Fill="#FFEC268F" HorizontalAlignment="Left" Height="70" Margin="1,44,0,0" Stroke="#FFEC268F" VerticalAlignment="Top" Width="592" Grid.ColumnSpan="2"/>
-        <Label Content="Acerca de" HorizontalAlignment="Left" Margin="171.206,54,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="36" FontWeight="Bold" RenderTransformOrigin="0.732,0.994" Grid.Column="1"/>
+        <Label Content="{DynamicResource ResourceKey=AcercaDe}" HorizontalAlignment="Left" Margin="171.206,54,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="36" FontWeight="Bold" RenderTransformOrigin="0.732,0.994" Grid.Column="1"/>
         <Image x:Name="imageDesarrollador" HorizontalAlignment="Left" Height="150" Margin="14.206,126,0,0" VerticalAlignment="Top" Width="150" Source="/LoterestTcs;component/Recursos/desarrollador.png" Grid.Column="1"/>
-        <Label Content="Elaborado por:" HorizontalAlignment="Left" Margin="206.333,113,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.732,0.994" Grid.Column="1"/>
-        <Label Content="Gabriela Sandoval Cruz" HorizontalAlignment="Left" Margin="205.333,139,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="25" RenderTransformOrigin="0.732,0.994" FontWeight="Bold" Grid.Column="1"/>
-        <Label Content="Enero 2020" HorizontalAlignment="Left" Margin="205.333,173,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.779,2.716" Grid.Column="1"/>
-        <Label Content="Versión 1.0" HorizontalAlignment="Left" Margin="205.333,204,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.779,2.716" Grid.Column="1"/>
-        <Label Content="Elaborado para la EE Tecnologías para la construcción de software" HorizontalAlignment="Left" Margin="207.333,233,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontWeight="Bold" RenderTransformOrigin="0.779,2.716" Grid.Column="1"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="187.333,278,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontWeight="Bold" RenderTransformOrigin="0.779,2.716" Grid.Column="1"/>
-        <Label Content="Docente: Juan Carlos Peréz Arriaga" HorizontalAlignment="Left" Margin="208.333,252,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontWeight="Bold" RenderTransformOrigin="0.779,2.716" Grid.Column="1"/>
+        <Label Content="{DynamicResource ResourceKey=ElaboradoPor}" HorizontalAlignment="Left" Margin="206.333,113,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.732,0.994" Grid.Column="1"/>
+        <Label Content="{DynamicResource ResourceKey=Autor}" HorizontalAlignment="Left" Margin="205.333,139,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="25" RenderTransformOrigin="0.732,0.994" FontWeight="Bold" Grid.Column="1"/>
+        <Label Content="{DynamicResource ResourceKey=FechaCreacion}" HorizontalAlignment="Left" Margin="205.333,173,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.779,2.716" Grid.Column="1"/>
+        <Label Content="{DynamicResource ResourceKey=Version}" HorizontalAlignment="Left" Margin="205.333,204,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="20" FontWeight="Bold" RenderTransformOrigin="0.779,2.716" Grid.Column="1"/>
+        <Label Content="{DynamicResource ResourceKey=ElaboradoPara}" HorizontalAlignment="Left" Margin="207.333,233,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontWeight="Bold" RenderTransformOrigin="0.779,2.716" Grid.Column="1"/>
+        <Label Content="{DynamicResource ResourceKey=Docente}" HorizontalAlignment="Left" Margin="208.333,252,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontWeight="Bold" RenderTransformOrigin="0.779,2.716" Grid.Column="1"/>
 
     </Grid>
 </Window>

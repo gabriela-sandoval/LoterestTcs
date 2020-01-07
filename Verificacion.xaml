@@ -17,15 +17,15 @@
             </Rectangle.Fill>
         </Rectangle>
         <Image Grid.Column="0" HorizontalAlignment="Left" Height="411" Margin="1105,219,0,-1.333" VerticalAlignment="Top" Width="178" Source="/LoterestTcs;component/Recursos/cartasFondo.png"/>
-        <Label Content="INGRESAR CÓDIGO &#xA;DE VERIFICACIÓN" HorizontalAlignment="Left" Margin="619,105,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="36" Width="287" Height="100" TextOptions.TextHintingMode="Fixed"/>
-        <Label Content="Acabamos de enviarte un código de&#xA;verificación a tu correo electrónico,&#xA; ingrésalo aquí:" HorizontalAlignment="Left" Margin="629,219,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold" Width="251"/>
         <TextBox x:Name="VerificacionTextBox" HorizontalAlignment="Left" Height="38" Margin="637,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontFamily="Calibri Light" FontSize="24" Foreground="#FF04547C" TextAlignment="Center"/>
-        <Button x:Name="VerificarButton" Content="Verificar" HorizontalAlignment="Left" Margin="755,413,0,0" VerticalAlignment="Top" Width="99" Height="31" FontFamily="Calibri Light" FontSize="14" Background="White" BorderBrush="White" Click="VerificarButton_Click" Foreground="#FF04547C"/>
-        <Button x:Name="CancelarButton" Content="Cancelar" HorizontalAlignment="Left" Margin="634,413,0,0" VerticalAlignment="Top" Width="99" Height="31" FontFamily="Calibri Light" FontSize="14" Background="#FF04547C" BorderBrush="White" Click="CancelarButton_Click">
+        <Button x:Name="VerificarButton" Content="{DynamicResource ResourceKey=Verificar}" HorizontalAlignment="Left" Margin="755,413,0,0" VerticalAlignment="Top" Width="99" Height="31" FontFamily="Calibri Light" FontSize="14" Background="White" BorderBrush="White" Click="VerificarButton_Click" Foreground="#FF04547C"/>
+        <Button x:Name="CancelarButton" Content="{DynamicResource ResourceKey=Cancelar}" HorizontalAlignment="Left" Margin="634,413,0,0" VerticalAlignment="Top" Width="99" Height="31" FontFamily="Calibri Light" FontSize="14" Background="#FF04547C" BorderBrush="White" Click="CancelarButton_Click">
             <Button.Foreground>
                 <SolidColorBrush Color="White" Opacity="0.7"/>
             </Button.Foreground>
         </Button>
+        <TextBlock x:Name="ConfirmaciónTextBlock" HorizontalAlignment="Left" Height="85" Margin="603,110,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=CodigoVerificacion}" VerticalAlignment="Top" Width="277" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="White" FontFamily="Calibri Light" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Height="72" Margin="626,219,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=InstruccionVerificacion}" VerticalAlignment="Top" Width="254" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="White" FontFamily="Calibri Light" FontSize="16"/>
 
     </Grid>
 </Window>

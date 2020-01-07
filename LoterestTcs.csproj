@@ -67,6 +67,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Idioma.xaml.cs">
+      <DependentUpon>Idioma.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\Puntajes.cs" />
     <Compile Include="Model\TableroJuego.cs" />
     <Compile Include="Model\Usuario.cs" />
@@ -81,9 +84,6 @@
     </Compile>
     <Compile Include="EnviarInvitacion.xaml.cs">
       <DependentUpon>EnviarInvitacion.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Ganaste.xaml.cs">
-      <DependentUpon>Ganaste.xaml</DependentUpon>
     </Compile>
     <Compile Include="Loteria.xaml.cs">
       <DependentUpon>Loteria.xaml</DependentUpon>
@@ -106,9 +106,17 @@
     <Compile Include="Verificacion.xaml.cs">
       <DependentUpon>Verificacion.xaml</DependentUpon>
     </Compile>
+    <Page Include="Idioma.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Idioma\Strings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Idioma\Strings_en_US.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -135,10 +143,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EnviarInvitacion.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Ganaste.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

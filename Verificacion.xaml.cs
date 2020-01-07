@@ -39,12 +39,12 @@ namespace LoterestTcs
                 }
                 else
                 {
-                    MessageBox.Show("Código incorrecto, intente nuevamente", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(Application.Current.Resources["OperacionInvalida"].ToString());
                 }
             }
             else
             {
-                MessageBox.Show("Campos vacios, intente nuevamente", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Application.Current.Resources["DatosInvalidosVerificacion"].ToString());
             }
         }
 
@@ -105,7 +105,7 @@ namespace LoterestTcs
             }
             catch (EndpointNotFoundException)
             {
-                MessageBox.Show("Operación inválida", "Crear cuenta");
+                MessageBox.Show(Application.Current.Resources["OperacionInvalida"].ToString());
             }
         }
 

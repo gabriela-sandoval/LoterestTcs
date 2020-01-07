@@ -43,12 +43,12 @@ namespace LoterestTcs
                 }
                 else
                 {
-                    MessageBox.Show("Campo vacío, intente nuevamente", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(Application.Current.Resources["DatosInvalidosInvitacion"].ToString());
                 }
             }
             catch (EndpointNotFoundException)
             {
-                MessageBox.Show("Operación inválida, intente nuevamente", "Operación inválida", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Application.Current.Resources["OperacionInvalida"].ToString());
             }
         }
 
@@ -85,7 +85,8 @@ namespace LoterestTcs
         /// <param name="mensaje">Recibe un parametro mensaje de tipo string</param>
         public void Respuesta(string mensaje)
         {
-            MessageBox.Show(mensaje, "Enviar invitación", MessageBoxButton.OK, MessageBoxImage.Information);
+            mensaje = Application.Current.Resources["MensajeUsuarioNoConectado"].ToString();
+            MessageBox.Show(mensaje);
         }
 
         public void DevuelveCuenta(Jugador jugador)
@@ -137,7 +138,7 @@ namespace LoterestTcs
             }
             else
             {
-                MessageBox.Show("Mensaje de invitación rechazado", "Enviar invitación", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Application.Current.Resources["MensajeInvitacionRechazada"].ToString());
             }
         }
 

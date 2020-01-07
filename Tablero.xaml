@@ -12,7 +12,7 @@
     <Grid>
         <Image HorizontalAlignment="Left" Height="398" Margin="-2,293,0,-62.333" VerticalAlignment="Top" Width="147" Source="/LoterestTcs;component/Recursos/CartasfondoInvertido.png"/>
         <Image x:Name="LogoImage" HorizontalAlignment="Left" Height="100" Margin="1172,490,0,0" VerticalAlignment="Top" Width="100" Source="/LoterestTcs;component/Recursos/logoLoterest.png" Grid.ColumnSpan="1" Grid.Column="0"/>
-        <Label Content="Selecciona las cartas con las que deseas jugar:" HorizontalAlignment="Left" Margin="105,31,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="24"/>
+        <Label Content="{DynamicResource ResourceKey=InstruccionLoteria}" HorizontalAlignment="Left" Margin="105,31,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="24"/>
         <Image x:Name="TableroImage" HorizontalAlignment="Left" Height="529" Margin="737,62,0,0" VerticalAlignment="Top" Width="377" Source="/LoterestTcs;component/Recursos/tableroVacio.png"/>
         <Image x:Name="ImageCarta1_1" HorizontalAlignment="Left" Height="117" Margin="753,77,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta1_1_MouseLeftButtonDown"/>
         <Image x:Name="ImageCarta1_2" HorizontalAlignment="Left" Height="117" Margin="843,77,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta1_2_MouseLeftButtonDown"/>
@@ -87,7 +87,7 @@
         <Image x:Name="Image54" HorizontalAlignment="Left" Height="80" Margin="597,506,0,0" VerticalAlignment="Top" Source="/LoterestTcs;component/Cartas/54.png" MouseLeftButtonDown="Image54_MouseLeftButtonDown"/>
         <TextBlock x:Name="SegundosTextBlock" HorizontalAlignment="Left" Margin="1174,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="36" Width="89"/>
         <Label x:Name="NombreJugadorLabel" Content="" HorizontalAlignment="Left" Margin="101,-1,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="24" Width="449"/>
-        <Label x:Name="TiempoLabel" Content="Tiempo: " HorizontalAlignment="Left" Margin="1158,27,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="24" Width="104"/>
+        <Label x:Name="TiempoLabel" Content="{DynamicResource ResourceKey=Tiempo}" HorizontalAlignment="Left" Margin="1158,27,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="24" Width="104"/>
 
     </Grid>
 </Window>

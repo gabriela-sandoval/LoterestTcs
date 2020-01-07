@@ -56,7 +56,7 @@ namespace LoterestTcs
             }
             catch (InvalidOperationException)
             {
-                MessageBox.Show("Operación inválida, intente nuevamente", "Operación inválida", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Application.Current.Resources["DatosInvalidos"].ToString());
             }
         }
 

@@ -43,13 +43,13 @@
                 <SolidColorBrush Color="White" Opacity="0.8"/>
             </PasswordBox.Background>
         </PasswordBox>
-        <Label x:Name="CrearCuentaLabel" Content="CREAR CUENTA" HorizontalAlignment="Left" Margin="640,162,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="36"/>
-        <Label x:Name="NombreUsuarioLabelCrearCuenta" Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="642,212,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
-        <Label x:Name="CorreoLabelCrearCuenta" Content="Correo electrónico:" HorizontalAlignment="Left" Margin="642,282,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
-        <Label x:Name="ContraseñaLabelCrearCuenta" Content="Contraseña:" HorizontalAlignment="Left" Margin="642,350,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
-        <Label x:Name="RepetirContraseñaLabelCrearCuenta" Content="Repetir contraseña:" HorizontalAlignment="Left" Margin="643,420,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
-        <Button x:Name="SiguienteButtonCrearCuenta" Content="SIGUIENTE" HorizontalAlignment="Left" Margin="716,528,0,0" VerticalAlignment="Top" Background="White" BorderBrush="White" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="18" FontWeight="ExtraBold" Padding="5,1" Click="SiguienteButtonCrearCuenta_Click" />
-        <Label x:Name="NombreUsuarioLabelIniciarSesion" Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="588,18,0,0" VerticalAlignment="Top" 
+        <Label x:Name="CrearCuentaLabel" Content="{DynamicResource ResourceKey=CrearCuenta}" HorizontalAlignment="Left" Margin="640,162,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="36"/>
+        <Label x:Name="NombreUsuarioLabelCrearCuenta" Content="{DynamicResource ResourceKey=NombreUsuario}" HorizontalAlignment="Left" Margin="642,212,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
+        <Label x:Name="CorreoLabelCrearCuenta" Content="{DynamicResource ResourceKey=CorreoElectronicoUsuario}" HorizontalAlignment="Left" Margin="642,282,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
+        <Label x:Name="ContraseñaLabelCrearCuenta" Content="{DynamicResource ResourceKey=ContraseñaUsuario}" HorizontalAlignment="Left" Margin="642,350,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
+        <Label x:Name="RepetirContraseñaLabelCrearCuenta" Content="{DynamicResource ResourceKey=RepetirContraseñaUsuario}" HorizontalAlignment="Left" Margin="643,420,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
+        <Button x:Name="SiguienteButtonCrearCuenta" Content="{DynamicResource ResourceKey=Siguiente}" HorizontalAlignment="Left" Margin="716,528,0,0" VerticalAlignment="Top" Background="White" BorderBrush="White" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="18" FontWeight="ExtraBold" Padding="5,1" Click="SiguienteButtonCrearCuenta_Click" />
+        <Label x:Name="NombreUsuarioLabelIniciarSesion" Content="{DynamicResource ResourceKey=NombreUsuario}" HorizontalAlignment="Left" Margin="588,18,0,0" VerticalAlignment="Top" 
             Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
         <TextBox x:Name="NombreTextBoxIniciarSesion" Height="30" Margin="587,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
             BorderBrush="{x:Null}" Foreground="#FF04547C" SelectionBrush="#FFCCE4E4" FontFamily="Calibri Light" 
@@ -58,7 +58,7 @@
                 <SolidColorBrush Color="White" Opacity="0.8"/>
             </TextBox.Background>
         </TextBox>
-        <Label x:Name="ContraseñaLabelIniciarSesion" Content="Contraseña:" HorizontalAlignment="Left" Margin="878,18,0,0" VerticalAlignment="Top" 
+        <Label x:Name="ContraseñaLabelIniciarSesion" Content="{DynamicResource ResourceKey=ContraseñaUsuario}" HorizontalAlignment="Left" Margin="878,18,0,0" VerticalAlignment="Top" 
             Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
         <PasswordBox x:Name="ContraseñaBoxIniciarSesion" HorizontalAlignment="Left" Margin="878,53,0,0" VerticalAlignment="Top" 
             Width="250" Height="30" FontFamily="Calibri Light" FontSize="18" FontWeight="Bold" 
@@ -68,9 +68,8 @@
                 <SolidColorBrush Color="White" Opacity="0.8"/>
             </PasswordBox.Background>
         </PasswordBox>
-        <Button x:Name="IngresarButtonIniciarSesion" Content="INGRESAR" HorizontalAlignment="Left" Margin="1169,54,0,0" VerticalAlignment="Top" Background="White" BorderBrush="White" Foreground="#FF04C4DC" FontFamily="Calibri Light" FontSize="18" FontWeight="ExtraBold" Padding="5,1" Click="IngresarButtonIniciarSesion_Click" />
-        <Label x:Name="MensajeLabelCrearCuenta" Content="" HorizontalAlignment="Left" Margin="641,486,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.912,0.41" Foreground="#FFF500FF" FontFamily="Calibri" FontSize="20" Width="246"/>
-        <TextBox x:Name="VerContraseñaTextBox" HorizontalAlignment="Left" Height="30" Margin="643,406,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" BorderBrush="{x:Null}" Foreground="#FF04547C" SelectionBrush="#FFCCE4E4" FontFamily="Calibri Light" FontSize="18" Visibility="Hidden">
+        <Button x:Name="IngresarButtonIniciarSesion" Content="{DynamicResource ResourceKey=Ingresar}" HorizontalAlignment="Left" Margin="1166,54,0,0" VerticalAlignment="Top" Background="White" BorderBrush="White" Foreground="#FF04C4DC" FontFamily="Calibri Light" FontSize="18" FontWeight="ExtraBold" Padding="5,1" Click="IngresarButtonIniciarSesion_Click" />
+        <TextBox x:Name="VerContraseñaTextBox" HorizontalAlignment="Left" Height="30" Margin="642,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" BorderBrush="{x:Null}" Foreground="#FF04547C" SelectionBrush="#FFCCE4E4" FontFamily="Calibri Light" FontSize="18" Visibility="Hidden" UseLayoutRounding="True" VerticalScrollBarVisibility="Visible">
             <TextBox.Background>
                 <SolidColorBrush Color="White" Opacity="0.8"/>
             </TextBox.Background>
@@ -80,7 +79,7 @@
                 <ImageBrush ImageSource="Recursos/ver.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="VerContraseñaRepetidaTextBox" HorizontalAlignment="Left" Height="30" Margin="642,476,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" BorderBrush="{x:Null}" Foreground="#FF04547C" SelectionBrush="#FFCCE4E4" FontFamily="Calibri Light" FontSize="18" Visibility="Hidden">
+        <TextBox x:Name="VerContraseñaRepetidaTextBox" HorizontalAlignment="Left" Height="30" Margin="642,452,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" BorderBrush="{x:Null}" Foreground="#FF04547C" SelectionBrush="#FFCCE4E4" FontFamily="Calibri Light" FontSize="18" Visibility="Hidden" VerticalScrollBarVisibility="Visible">
             <TextBox.Background>
                 <SolidColorBrush Color="White" Opacity="0.8"/>
             </TextBox.Background>
@@ -102,17 +101,9 @@
                 <ImageBrush ImageSource="Recursos/ver.png"/>
             </Button.Background>
         </Button>
-        <Image HorizontalAlignment="Left" Height="51" Margin="93,554,0,0" VerticalAlignment="Top" Width="58" Source="Recursos/internacionalizacion.png"/>
-        <ComboBox x:Name="IdiomaComboBox" HorizontalAlignment="Left" Margin="151,568,0,0" VerticalAlignment="Top" Width="108" Foreground="#FF04547C" BorderBrush="White" FontFamily="Calibri Light" FontSize="16" SelectionChanged="IdiomaComboBox_SelectionChanged">
-            <ComboBox.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </ComboBox.Background>
-            <ListBoxItem x:Name="EspañolListBoxItem" Content="ES Español" Foreground="#FF04547C" HorizontalAlignment="Center" FontSize="16" FontFamily="Calibri Light"/>
-            <ListBoxItem x:Name="InglesListBoxItem" Content="EN English" Foreground="#FF04547C" FontSize="16" FontFamily="Calibri Light" HorizontalAlignment="Center"/>
-        </ComboBox>
+        <Image HorizontalAlignment="Left" Height="65" Margin="93,542,0,0" VerticalAlignment="Top" Width="67" Source="Recursos/internacionalizacion.png"/>
+        <RadioButton x:Name="EspañolRadioButton" Content="{DynamicResource ResourceKey=Español}" HorizontalAlignment="Left" Margin="160,560,0,0" VerticalAlignment="Top" Background="White" FontFamily="Calibri Light" FontSize="18" Foreground="White" Checked="EspañolRadioButton_Checked"/>
+        <RadioButton x:Name="InglesRadioButton" Content="{DynamicResource ResourceKey=Ingles}" HorizontalAlignment="Left" Margin="160,586,0,0" VerticalAlignment="Top" Background="White" FontFamily="Calibri Light" FontSize="18" Foreground="White" Checked="InglesRadioButton_Checked"/>
 
     </Grid>
 </Window>

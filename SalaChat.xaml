@@ -14,9 +14,8 @@
             <Image HorizontalAlignment="Left" Height="620" VerticalAlignment="Top" Width="298" Source="/LoterestTcs;component/Recursos/fondoChat.png" Stretch="UniformToFill" Margin="2,22,0,0"/>
 
         </Grid>
-        <Button x:Name="buttonConectadoDesconectado" Content="Chatear" HorizontalAlignment="Left" Margin="18,249,0,0" VerticalAlignment="Top" Width="267" Height="29" BorderBrush="{x:Null}" FontFamily="Calibri Light" FontWeight="Bold" FontSize="20" Background="#FF04547C" Foreground="White"/>
         <TextBox x:Name="MensajeTextBox" HorizontalAlignment="Left" Height="28" Margin="18,572,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontFamily="Calibri Light" FontSize="16" Foreground="#FF04547C" BorderBrush="{x:Null}"/>
-        <Rectangle HorizontalAlignment="Left" Height="280" Margin="18,283,0,0" VerticalAlignment="Top" Width="267">
+        <Rectangle HorizontalAlignment="Left" Height="310" Margin="18,253,0,0" VerticalAlignment="Top" Width="267">
             <Rectangle.Fill>
                 <SolidColorBrush Color="White" Opacity="0.7"/>
             </Rectangle.Fill>
@@ -36,24 +35,22 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Rectangle HorizontalAlignment="Left" Height="316" Margin="421,163,0,0" Stroke="White" VerticalAlignment="Top" Width="576">
+        <Rectangle HorizontalAlignment="Left" Height="323" Margin="428,112,0,0" Stroke="White" VerticalAlignment="Top" Width="576">
             <Rectangle.Fill>
                 <SolidColorBrush Color="White" Opacity="0.75"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Label Content="Reglas del juego:" HorizontalAlignment="Left" Margin="425,79,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White" Width="506"/>
+        <Label Content="{DynamicResource ResourceKey=ReglasJuego}" HorizontalAlignment="Left" Margin="432,28,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White" Width="506"/>
         <Image Grid.Column="0" HorizontalAlignment="Left" Height="475" Margin="1077,155,-12.667,-1.333" VerticalAlignment="Top" Width="219" Source="/LoterestTcs;component/Recursos/cartasFondo.png"/>
-        <Label x:Name="UsernameLabel" Content="User" HorizontalAlignment="Left" Margin="93,184,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White" IsEnabled="False"/>
-        <ListView x:Name="ChatListView" HorizontalAlignment="Left" Height="259" Margin="28,295,0,0" VerticalAlignment="Top" Width="247">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Label x:Name="___Sin_nombre_" Content="El juego comienza en:" HorizontalAlignment="Left" Margin="434,506,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="UsernameLabel" Content="" HorizontalAlignment="Left" Margin="18,184,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White" IsEnabled="False" Width="249"/>
+        <Label Content="{DynamicResource ResourceKey=ElJuegoComienzaEn}" HorizontalAlignment="Left" Margin="434,506,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White"/>
         <Label x:Name="TiempoLabel" Content="" HorizontalAlignment="Left" Margin="871,509,0,0" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="48" FontWeight="Bold" Foreground="White" Width="158"/>
-        <Label Content="1. Tendrás 5 segundos para buscar y seleccionar " HorizontalAlignment="Left" Margin="453,184,0,0" VerticalAlignment="Top" Height="29" Width="478"/>
+        <TextBlock x:Name="ChatTextBlock" HorizontalAlignment="Left" Margin="33,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="274" Width="234" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="18" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Height="47" Margin="457,140,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=Regla1}" VerticalAlignment="Top" Width="522" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="#04547C" FontFamily="Calibri Light" FontSize="18" Background="{x:Null}"/>
+        <TextBlock HorizontalAlignment="Left" Height="47" Margin="457,202,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=Regla2}" VerticalAlignment="Top" Width="522" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="#04547C" FontFamily="Calibri Light" FontSize="18" Background="{x:Null}"/>
+        <TextBlock HorizontalAlignment="Left" Height="47" Margin="457,254,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=Regla3}" VerticalAlignment="Top" Width="522" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="#04547C" FontFamily="Calibri Light" FontSize="18" Background="{x:Null}"/>
+        <TextBlock HorizontalAlignment="Left" Height="47" Margin="457,306,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=Regla4}" VerticalAlignment="Top" Width="522" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="#04547C" FontFamily="Calibri Light" FontSize="18" Background="{x:Null}"/>
+        <TextBlock HorizontalAlignment="Left" Height="47" Margin="457,353,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=Regla5}" VerticalAlignment="Top" Width="522" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="#04547C" FontFamily="Calibri Light" FontSize="18" Background="{x:Null}"/>
 
     </Grid>
 </Window>

@@ -63,6 +63,13 @@ namespace LoterestTcs
             PuntajesJugadores puntajes = new PuntajesJugadores(jugador);
             DesplegarVentana(puntajes);
         }
+
+        private void IdiomaButton_Click(object sender, RoutedEventArgs e)
+        {
+            Idioma idioma = new Idioma();
+            idioma.ShowDialog();
+        }
+
         private void AcercaDeButton_Click(object sender, RoutedEventArgs e)
         {
             AcercaDe acercaDe = new AcercaDe();

@@ -31,17 +31,17 @@
                 <SolidColorBrush Color="White" Opacity="0.8"/>
             </PasswordBox.Background>
         </PasswordBox>
-        <Label x:Name="NombreUsuarioLabelModificarCuenta" Content="Nombre de usuario:" HorizontalAlignment="Left" Margin="714,250,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
-        <Label x:Name="ContraseñaLabelModificarCuenta" Content="Contraseña:" HorizontalAlignment="Left" Margin="714,322,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
-        <Label x:Name="RepetirContraseñaLabelModificarCuenta" Content="Repetir contraseña:" HorizontalAlignment="Left" Margin="715,392,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
-        <Button x:Name="ContinuarButtonModificarCuenta" Content="CONTINUAR" HorizontalAlignment="Left" Margin="858,498,0,0" VerticalAlignment="Top" Background="White" BorderBrush="White" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="18" FontWeight="ExtraBold" Padding="5,1" Click="ContinuarButtonModificarCuenta_Click" IsEnabled="False" />
+        <Label x:Name="NombreUsuarioLabelModificarCuenta" Content="{DynamicResource ResourceKey=NombreUsuario}" HorizontalAlignment="Left" Margin="714,250,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
+        <Label x:Name="ContraseñaLabelModificarCuenta" Content="{DynamicResource ResourceKey=ContraseñaUsuario}" HorizontalAlignment="Left" Margin="714,322,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
+        <Label x:Name="RepetirContraseñaLabelModificarCuenta" Content="{DynamicResource ResourceKey=RepetirContraseñaUsuario}" HorizontalAlignment="Left" Margin="715,392,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold"/>
+        <Button x:Name="ContinuarButtonModificarCuenta" Content="{DynamicResource ResourceKey=Continuar}" HorizontalAlignment="Left" Margin="858,498,0,0" VerticalAlignment="Top" Background="White" BorderBrush="White" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="18" FontWeight="ExtraBold" Padding="5,1" Click="ContinuarButtonModificarCuenta_Click" IsEnabled="False" />
         <Rectangle HorizontalAlignment="Left" Height="156" VerticalAlignment="Top" Width="1283" Margin="0,27,0,0">
             <Rectangle.Fill>
                 <SolidColorBrush Color="#FF04C4DC" Opacity="0.75"/>
             </Rectangle.Fill>
         </Rectangle>
         <Label x:Name="NombreJugadorLabel" HorizontalAlignment="Left" Height="79" Margin="176,58,0,0" Content="" VerticalAlignment="Top" Width="240" FontFamily="Calibri Light" FontSize="48" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
-        <Label x:Name="PuntajeLabel" HorizontalAlignment="Left" Margin="858,58,0,0" Content="Perfil" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="72" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Label x:Name="PuntajeLabel" HorizontalAlignment="Left" Margin="858,58,0,0" Content="{DynamicResource ResourceKey=Perfil}" VerticalAlignment="Top" FontFamily="Calibri Light" FontSize="72" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
         <Button x:Name="RegresarButton" Content="" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Width="70" Height="70" BorderBrush="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.028,0.087" Click="RegresarButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/LoterestTcs;component/Recursos/regresar.png" Stretch="Uniform"/>
@@ -67,7 +67,7 @@
                 <ImageBrush ImageSource="/LoterestTcs;component/Recursos/ver.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="LimpiarButtonModificarCuenta" Content="LIMPIAR" HorizontalAlignment="Left" Margin="720,498,0,0" VerticalAlignment="Top" Background="White" BorderBrush="White" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="18" FontWeight="ExtraBold" Padding="5,1" Click="LimpiarButtonModificarCuenta_Click" />
+        <Button x:Name="LimpiarButtonModificarCuenta" Content="{DynamicResource ResourceKey=Limpiar}" HorizontalAlignment="Left" Margin="720,498,0,0" VerticalAlignment="Top" Background="White" BorderBrush="White" Foreground="#FF04547C" FontFamily="Calibri Light" FontSize="18" FontWeight="ExtraBold" Padding="5,1" Click="LimpiarButtonModificarCuenta_Click" />
 
     </Grid>
 </Window>

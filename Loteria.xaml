@@ -17,8 +17,7 @@
             </Button.Background>
         </Button>
         <Image x:Name="CartaActualImage" HorizontalAlignment="Left" Height="263" Margin="150,91,0,0" VerticalAlignment="Top" Width="175" Source="/LoterestTcs;component/Cartas/1.png"/>
-        <Label Content="Carta saliente:" HorizontalAlignment="Left" Margin="171,45,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="24"/>
-        <Label Content="Tiempo:" HorizontalAlignment="Left" Margin="950,86,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="48" RenderTransformOrigin="6.062,-8.32"/>
+        <Label Content="{DynamicResource ResourceKey=Tiempo}" HorizontalAlignment="Left" Margin="950,86,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="48" RenderTransformOrigin="6.062,-8.32"/>
         <Image x:Name="TableroImage" HorizontalAlignment="Left" Height="529" Margin="455,53,0,0" VerticalAlignment="Top" Width="377" Source="/LoterestTcs;component/Recursos/tableroVacio.png"/>
         <Image x:Name="ImageCarta1_1" HorizontalAlignment="Left" Height="117" Margin="471,68,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta1_1_MouseLeftButtonDown"/>
         <Image x:Name="ImageCarta1_2" HorizontalAlignment="Left" Height="117" Margin="561,68,0,0" VerticalAlignment="Top" Width="79" MouseLeftButtonDown="ImageCarta1_2_MouseLeftButtonDown"/>

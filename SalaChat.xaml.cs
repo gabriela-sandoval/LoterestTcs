@@ -35,6 +35,7 @@ namespace LoterestTcs
             this.jugador = jugador;
             modoJuego = modoJuegoElegido;
             nombreUsuario = nombreUsuarioPartida;
+            UsernameLabel.Content = jugador.NombreJugador;
             CuentaRegresiva();
         }
 
@@ -72,7 +73,14 @@ namespace LoterestTcs
             string mensaje = MensajeTextBox.Text.Trim();
             InstanceContext instanceContext = new InstanceContext(this);
             UserManagerClient userManagerClient = new UserManagerClient(instanceContext);
-            userManagerClient.EnviarMensajeChat(nombreUsuario, mensaje, jugador.NombreJugador);
+            userManagerClient.EnviarMensajeChat(jugador.NombreJugador, mensaje, nombreUsuario);
+            ChatTextBlock.Text = ObtenerMensaje(mensaje);
+        }
+
+        public static string ObtenerMensaje(string mensaje)
+        {
+            string mensajeChat = mensaje;
+            return mensajeChat;
         }
 
         public void DevuelveCuenta(Jugador jugador)

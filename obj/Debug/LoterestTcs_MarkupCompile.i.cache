@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\App.xaml
-14368376680
+15971939388
 
-22921861485
+221537922351
 16-1563998970
-Idioma\Strings.xaml;MainWindow.xaml;AcercaDe.xaml;AlAzar.xaml;ConfirmacionDeInvitacion.xaml;EnviarInvitacion.xaml;Ganaste.xaml;Loteria.xaml;Menu.xaml;PerfilJugador.xaml;PuntajesJugadores.xaml;SalaChat.xaml;Tablero.xaml;Verificacion.xaml;
+Idioma.xaml;Idioma\Strings.xaml;Idioma\Strings_en_US.xaml;MainWindow.xaml;AcercaDe.xaml;AlAzar.xaml;ConfirmacionDeInvitacion.xaml;EnviarInvitacion.xaml;Loteria.xaml;Menu.xaml;PerfilJugador.xaml;PuntajesJugadores.xaml;SalaChat.xaml;Tablero.xaml;Verificacion.xaml;
 
-False
+True
 

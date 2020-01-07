@@ -2,6 +2,7 @@
 using LoterestTcs.Model;
 using LoterestTcs.ServiceReferenceLoterest;
 using System;
+using System.Linq;
 using System.ServiceModel;
 using System.Windows;
 
@@ -55,24 +56,23 @@ namespace LoterestTcs
                         }
                         else
                         {
-                            MessageBox.Show("Error al enviar el correo", "Correo no enviado", MessageBoxButton.OK, MessageBoxImage.Error);
+                            MessageBox.Show(Application.Current.Resources["ErrorEnvioDeCorreo"].ToString());
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Correo inválido, intente nuevamente", "Correo inválido", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show(Application.Current.Resources["CorreoInvalido"].ToString());
                         CorreoTextBoxCrearCuenta.Clear();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Algún campo se encuentra vacío, intente nuevamente", "Campos inválidos", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(Application.Current.Resources["DatosInvalidos"].ToString());
                 }
             }
             else
             {
-                MessageBox.Show("Las contraseñas no coinciden, intente nuevamente", "Contraseñas no coinciden", MessageBoxButton.OK, MessageBoxImage.Error);
-                ContraseñaBoxCrearCuenta.Clear();
+                MessageBox.Show(Application.Current.Resources["ContraseñasNoCoinciden"].ToString()); ContraseñaBoxCrearCuenta.Clear();
                 RepetirContraseñaBoxCrearCuenta.Clear();
             }
         }
@@ -140,12 +140,12 @@ namespace LoterestTcs
                 }
                 else
                 {
-                    MessageBox.Show("Algún campo se encuentra vacío, intente nuevamente", "Campos inválidos", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(Application.Current.Resources["DatosInvalidos"].ToString());
                 }
             }
             catch (EndpointNotFoundException)
             {
-                MessageBox.Show("Operación inválida, intente nuevamente", "Operación inválida", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Application.Current.Resources["OperacionInvalida"].ToString());
             }
         }
 
@@ -212,7 +212,8 @@ namespace LoterestTcs
         /// <param name="mensaje">Recibe un parametro mensaje de tipo string</param>
         public void Respuesta(string mensaje)
         {
-            MessageBox.Show(mensaje, "Iniciar sesión", MessageBoxButton.OK, MessageBoxImage.Information);
+            mensaje = Application.Current.Resources["CredencialesInvalidas"].ToString();
+            MessageBox.Show(mensaje);
         }
 
         /// <summary>
@@ -231,7 +232,7 @@ namespace LoterestTcs
 
         public void MensajeChat(string mensaje)
         {
-            throw new NotImplementedException();
+            SalaChat.ObtenerMensaje(mensaje);
         }
 
         public void MostrarPuntajes(PuntajeUsuario[] puntajesUsuarios)
@@ -251,7 +252,7 @@ namespace LoterestTcs
             {
                 if (modoJuego.Equals("Loteria"))
                 {
-                    MessageBox.Show("Se aceptó tu invitación", "Confirmación", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show(Application.Current.Resources["ConfirmacionInvitacion"].ToString());
                     Dispatcher.Invoke(() =>
                     {
                         Tablero tablero = new Tablero(jugador, 60, nombreUsuario);
@@ -262,7 +263,7 @@ namespace LoterestTcs
 
                 if (modoJuego.Equals("AlAzar"))
                 {
-                    MessageBox.Show("Se aceptó tu invitación", "Confirmación", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show(Application.Current.Resources["ConfirmacionInvitacion"].ToString());
                     Dispatcher.Invoke(() =>
                     {
                         AlAzar alAzar = new AlAzar(jugador, 60, nombreUsuario);
@@ -273,7 +274,7 @@ namespace LoterestTcs
             }
             else
             {
-                MessageBox.Show("No aceptó tu invitación", "Confirmación", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Application.Current.Resources["MensajeInvitacionRechazada"].ToString());
             }
         }
 
@@ -297,21 +298,19 @@ namespace LoterestTcs
             MessageBox.Show(mensaje, "Fin partida", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        private void IdiomaComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void EspañolRadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            string idioma = IdiomaComboBox.Text.Trim();
+            var resources = new ResourceDictionary();
+            resources.Source = new Uri("pack://application:,,,/Idioma/Strings.xaml");
+            Application.Current.Resources.MergedDictionaries.Add(resources);
+        }
 
-            if (idioma.Equals("ES Español"))
-            {
-                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("es-MX");
-            }
-            else
-            {
-                if (idioma.Equals("EN English"))
-                {
-                    System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
-                }
-            }
+        private void InglesRadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            var resources = new ResourceDictionary();
+            resources.Source = new Uri("pack://application:,,,/Idioma/Strings_en_US.xaml");
+            Application.Current.Resources.MergedDictionaries.Add(resources);
+
         }
     }
 }

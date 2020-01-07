@@ -11,21 +11,25 @@
     </Window.Background>
     <Grid>
         <Image HorizontalAlignment="Left" Height="360" Margin="172,110,0,0" VerticalAlignment="Top" Width="243" Source="/LoterestTcs;component/Recursos/logoLoterest.png" RenderTransformOrigin="0.359,0.394"/>
-        <Rectangle HorizontalAlignment="Left" Height="497" Margin="557,55,0,0" VerticalAlignment="Top" Width="376">
+        <Rectangle HorizontalAlignment="Left" Height="521" Margin="557,55,0,0" VerticalAlignment="Top" Width="376">
             <Rectangle.Fill>
                 <SolidColorBrush Color="Black" Opacity="0.46"/>
             </Rectangle.Fill>
         </Rectangle>
         <Image Grid.Column="0" HorizontalAlignment="Left" Height="411" Margin="1105,219,0,-1.333" VerticalAlignment="Top" Width="178" Source="/LoterestTcs;component/Recursos/cartasFondo.png"/>
-        <Label Content="CONFIRMACIÓN &#xD;&#xA;DE INVITACIÓN:" HorizontalAlignment="Left" Margin="609,83,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="36" Width="287" Height="100" TextOptions.TextHintingMode="Fixed" RenderTransformOrigin="0.463,-0.207"/>
-        <Label Content="Antes de aceptar considera lo siguiente:&#xD;&#xA;1. Tendrás 1 minuto para seleccionar 16&#xD;&#xA;    cartas que formarán tu tablero. &#xD;&#xA;2. Las cartas se seleccionan haciendo clic&#xD;&#xA;    sobre ellas, si el tiempo se agota se &#xD;&#xA;    agregarán aleatoriamente las que falten.&#xD;&#xA;3. Si deseas cambiar alguna carta sólo da &#xD;&#xA;    clic sobre la carta a cambiar dentro del&#xD;&#xA;    tablero.&#xD;&#xA;4. Una vez que aceptes jugar no podrás salir&#xD;&#xA;     de la partida." HorizontalAlignment="Left" Margin="604,251,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold" Width="296" Height="232"/>
-        <Button x:Name="AceptarButton" Content="Aceptar" HorizontalAlignment="Left" Margin="755,495,0,0" VerticalAlignment="Top" Width="99" Height="31" FontFamily="Calibri Light" FontSize="14" Background="White" BorderBrush="White" Click="AceptarButton_Click" Foreground="#FF04547C"/>
-        <Button x:Name="RechazarButton" Content="Rechazar" HorizontalAlignment="Left" Margin="634,495,0,0" VerticalAlignment="Top" Width="99" Height="32" FontFamily="Calibri Light" FontSize="14" Background="#FF04547C" BorderBrush="White" Click="RechazarButton_Click">
+        <Button x:Name="AceptarButton" Content="{DynamicResource ResourceKey=Aceptar}" HorizontalAlignment="Left" Margin="755,517,0,0" VerticalAlignment="Top" Width="99" Height="31" FontFamily="Calibri Light" FontSize="14" Background="White" BorderBrush="White" Click="AceptarButton_Click" Foreground="#FF04547C"/>
+        <Button x:Name="RechazarButton" Content="{DynamicResource ResourceKey=Rechazar}" HorizontalAlignment="Left" Margin="634,517,0,0" VerticalAlignment="Top" Width="99" Height="32" FontFamily="Calibri Light" FontSize="14" Background="#FF04547C" BorderBrush="White" Click="RechazarButton_Click">
             <Button.Foreground>
                 <SolidColorBrush Color="White" Opacity="0.7"/>
             </Button.Foreground>
         </Button>
         <Label x:Name="MensajeInvitacionLabel" Content="" HorizontalAlignment="Left" Margin="604,179,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri Light" FontSize="16" FontWeight="ExtraBold" Width="296" Height="62"/>
+        <TextBlock x:Name="ConfirmaciónTextBlock" HorizontalAlignment="Left" Height="85" Margin="604,89,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=ConfirmacionDeInvitacion}" VerticalAlignment="Top" Width="277" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="White" FontFamily="Calibri Light" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Height="24" Margin="604,246,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=Consideraciones}" VerticalAlignment="Top" Width="296" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="White" FontFamily="Calibri Light" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Height="47" Margin="604,275,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=Consideracion1}" VerticalAlignment="Top" Width="296" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="White" FontFamily="Calibri Light" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Height="64" Margin="604,327,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=Consideracion2}" VerticalAlignment="Top" Width="296" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="White" FontFamily="Calibri Light" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Height="47" Margin="604,396,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=Consideracion3}" VerticalAlignment="Top" Width="296" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="White" FontFamily="Calibri Light" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Height="47" Margin="604,448,0,0" TextWrapping="Wrap" Text="{DynamicResource ResourceKey=Consideracion4}" VerticalAlignment="Top" Width="296" TextAlignment="Justify" RenderTransformOrigin="2.443,-1.722" Foreground="White" FontFamily="Calibri Light" FontSize="16"/>
 
     </Grid>
 </Window>

@@ -10,10 +10,8 @@ namespace LoterestTcs
     /// </summary>
     public partial class AlAzar : Window
     {
-        private TableroJuego tableroJuego;
         private Jugador jugador;
         private string nombreUsuario;
-        private string modoJuego = "AlAzar";
 
         /// <summary>
         /// Inicialización de componentes de ventana AlAzar

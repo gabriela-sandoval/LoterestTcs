@@ -51,12 +51,12 @@ namespace LoterestTcs
                 else
                 {
 
-                    MessageBox.Show("Algún campo se encuentra vacío, intente nuevamente", "Campos inválidos", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(Application.Current.Resources["DatosInvalidos"].ToString());
                 }
             }
             else
             {
-                MessageBox.Show("Las contraseñas no coinciden, intente nuevamente", "Contraseñas incorrectas", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Application.Current.Resources["ContraseñasNoCoinciden"].ToString());
             }
 
         }
@@ -94,7 +94,7 @@ namespace LoterestTcs
             }
             catch (EndpointNotFoundException)
             {
-                MessageBox.Show("Operación inválida, intente nuevamente", "Operación inválida", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Application.Current.Resources["OperacionInvalida"].ToString());
             }
         }
 

@@ -10,7 +10,6 @@ C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\AcercaDe.g.cs
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\AlAzar.g.cs
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\ConfirmacionDeInvitacion.g.cs
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\EnviarInvitacion.g.cs
-C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ganaste.g.cs
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Loteria.g.cs
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Menu.g.cs
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\PerfilJugador.g.cs
@@ -28,7 +27,6 @@ C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\AcercaDe.baml
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\AlAzar.baml
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\ConfirmacionDeInvitacion.baml
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\EnviarInvitacion.baml
-C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Ganaste.baml
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Loteria.baml
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Menu.baml
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\PerfilJugador.baml
@@ -42,3 +40,6 @@ C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\LoterestTcs.csproj
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\LoterestTcs.csproj.CopyComplete
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\LoterestTcs.exe
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\LoterestTcs.pdb
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Idioma\Strings_en_US.baml
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Idioma.g.cs
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Idioma.baml

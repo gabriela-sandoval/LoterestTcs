@@ -133,7 +133,7 @@ namespace LoterestTcs
             }
             else
             {
-                MessageBox.Show("¡Sólo puedes elegir 16 cartas!", "Eleccion máxima", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Application.Current.Resources["MensajeMaximoCartas"].ToString());
             }
         }
 

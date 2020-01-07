@@ -130,8 +130,8 @@ namespace LoterestTcs
                             this.Close();
                         }
                         catch (EndpointNotFoundException)
-                        {
-                            MessageBox.Show("Operación inválida, intente nuevamente", "Operación inválida", MessageBoxButton.OK, MessageBoxImage.Information);
+                        { 
+                            MessageBox.Show(Application.Current.Resources["OperacionInvalida"].ToString()); 
                         }
                     }
                     if (numeroCartaActual > 16)
@@ -169,7 +169,7 @@ namespace LoterestTcs
             }
             else
             {
-                MessageBox.Show("Selección de carta inválida", "Selección inválida", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Application.Current.Resources["MensajeSeleccionInvalida"].ToString()); 
                 return false;
             }
         }
