@@ -79,7 +79,7 @@
                 <ImageBrush ImageSource="Recursos/ver.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="VerContraseñaRepetidaTextBox" HorizontalAlignment="Left" Height="30" Margin="642,452,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" BorderBrush="{x:Null}" Foreground="#FF04547C" SelectionBrush="#FFCCE4E4" FontFamily="Calibri Light" FontSize="18" Visibility="Hidden" VerticalScrollBarVisibility="Visible">
+        <TextBox x:Name="VerContraseñaRepetidaTextBox" HorizontalAlignment="Left" Height="30" Margin="642,450,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" BorderBrush="{x:Null}" Foreground="#FF04547C" SelectionBrush="#FFCCE4E4" FontFamily="Calibri Light" FontSize="18" Visibility="Hidden" VerticalScrollBarVisibility="Visible">
             <TextBox.Background>
                 <SolidColorBrush Color="White" Opacity="0.8"/>
             </TextBox.Background>

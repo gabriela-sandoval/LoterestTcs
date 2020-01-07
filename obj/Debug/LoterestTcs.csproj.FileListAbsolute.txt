@@ -43,3 +43,7 @@ C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\LoterestTcs.pdb
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Idioma\Strings_en_US.baml
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Idioma.g.cs
 C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\Idioma.baml
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\bin\Debug\LoterestTcs.exe.manifest
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\bin\Debug\LoterestTcs.application
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\LoterestTcs.exe.manifest
+C:\Users\USER8\source\repos\LoterestTcs\LoterestTcs\obj\Debug\LoterestTcs.application
